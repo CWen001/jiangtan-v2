@@ -1,0 +1,60 @@
+{
+  "mode": "builtin_image_gen",
+  "reference": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-light-retrotech-2026-09-10/b-retro-electric-port.png",
+  "art_direction": {
+    "id": "jiangcheng_retro_electric_noir",
+    "revision": "draft-01"
+  },
+  "requests": [
+    {
+      "id": "character-near-v1",
+      "title": "人物与环境近景",
+      "prompt": "Use case: stylized-concept. Create a single landscape near-view concept study for a first-person game, using the supplied image as the approved art-direction and world reference. Move the camera closer into this same grounded fictional river-port world. Preserve its Fallen Aces inspired noir comic character: ink contours, broad painted shadow planes, dimensional simple architecture with hand-painted textures, everyday dockside life, blue-grey wet evening with restrained amber practical lights. Old stone, wood, dark enamel machinery, small retro electrical details. Technology is subtle and practical, with no bizarre mysticism. This is a concept of a 3D environment containing 2D illustrated human characters, not a photograph or a hyperreal CGI render. Big shapes remain calm; concentrate selected hand-painted marks around structure and wear. ABSOLUTELY NO writing, letters, digits, pseudo-writing, labels, logos, brand marks, watermarks, interface, captions, diagrams or panel dividers anywhere. No masks, robots, fantasy costumes, glowing runes, excessive brass, gears, giant steam engines or cyberpunk neon. One coherent environmental view, not a collage or reference sheet.\nPRIMARY REQUEST: study how an ordinary 2D comic dock worker visually belongs in this 3D harbor when seen from conversational distance. Camera at normal standing eye height, roughly three metres from the red-jacket courier from the reference; full body visible including both boots and their contact with wet stone ground. He is a normal East Asian adult male in a dark flat cap, faded rust-red work jacket, dark trousers and practical shoes, ordinary relaxed waiting pose, no weapon. Face, jacket and hands drawn with confident varied ink lines and two or three broad painted value groups, no skin pores or fabric microtexture. Silhouette clear, not a stiff cardboard cutout with white outline. Keep him a little off centre and occupying roughly two thirds of the frame height. Near a thick timber warehouse doorway with a warmly lit interior; stone landing and a low wooden dock edge show three-dimensional thickness and perspective, a short part of the river and moored boat remains visible beyond. A nearby caged amber wall lamp provides warm side-light, cooler river light fills the opposite side. His boots ground convincingly with soft contact shadow, wet surface highlights stay subordinate. A foreground rope post overlaps just a small outer edge of one trouser leg to demonstrate correct occlusion without hiding feet. Preserve quiet shapes immediately behind head and shoulders, selective woodgrain, stone seams and edge wear elsewhere. Equipment remains incidental; the person and the lived-in doorway are the focus. No new architectural landmarks. Human-scale immersive in-world shot, all important surfaces in readable focus.",
+      "source_output": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-247fa338-e374-49e1-9ee4-304c57983737.png",
+      "image": "art/imagegen/noir-near-studies-2026-09-10/character-near-v1.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "cd48c9f4ca11814b0248a9c1c5a416883e4a6c1a45f5898bcd18ee821137e33b"
+    },
+    {
+      "id": "materials-near-v1",
+      "title": "石木金属材质近景",
+      "prompt": "Use case: stylized-concept. Create a single landscape near-view concept study for a first-person game, using the supplied image as the approved art-direction and world reference. Move the camera closer into this same grounded fictional river-port world. Preserve its Fallen Aces inspired noir comic character: ink contours, broad painted shadow planes, dimensional simple architecture with hand-painted textures, everyday dockside life, blue-grey wet evening with restrained amber practical lights. Old stone, wood, dark enamel machinery, small retro electrical details. Technology is subtle and practical, with no bizarre mysticism. This is a concept of a 3D environment containing 2D illustrated human characters, not a photograph or a hyperreal CGI render. Big shapes remain calm; concentrate selected hand-painted marks around structure and wear. ABSOLUTELY NO writing, letters, digits, pseudo-writing, labels, logos, brand marks, watermarks, interface, captions, diagrams or panel dividers anywhere. No masks, robots, fantasy costumes, glowing runes, excessive brass, gears, giant steam engines or cyberpunk neon. One coherent environmental view, not a collage or reference sheet.\nPRIMARY REQUEST: study nearby stone, timber and painted metal in one believable little dockside corner. Camera at ordinary standing eye height looking slightly downward at the wall-mounted shore-power equipment from the reference, from about one and a half metres away. Show a compact rounded dark-enamel electrical cabinet on the warehouse's weathered plaster and brick wall, one unlabelled small pale-mint glass indicator, a simple closed metal handle, a few ceramic cable fittings; thick matte rubber cables are clipped neatly along the wall and routed away above the walking surface. Beside it a thick wooden door jamb and a small well-used wooden crate; below, two broad wet stone steps with clear depth and generous intact faces. Frame all these materials together within a roughly two-metre-wide corner; cabinet is modest equipment, not a giant futuristic focal sculpture. A caged warm lamp from above-left gives broad warm light, cool dusk fill separates shadow planes. Stone has limited broad chipped corners, intermittent mortar lines and uneven puddle sheen; wood has directional painted grain grouped near edges and polished contact points, with large quiet plank faces; metal has mostly intact dark coating, a few fine scratches at handle and seam, narrow edge highlights, no all-over rust. Rubber cables are matte; glass indicator stays a tiny subdued accent. Clear ink-assisted geometry and controlled brush marks, less high-frequency surface noise than a photograph. Calm plaster contrasts with richer stone edge and wood detail. A narrow doorway glimpse provides spatial depth without adding new props or people. Keep useful detail sharp without cinematic bokeh. Make the materials visibly different through shape, marks and reflection, not via a uniform grunge overlay.",
+      "source_output": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-77832bdd-ad8d-4306-84e3-7e2e5ca8451e.png",
+      "image": "art/imagegen/noir-near-studies-2026-09-10/materials-near-v1.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "31860e8432b4dab43cf5939edf1ca5b7905d1d9c4fb46f37b122d4fb7f6db635"
+    },
+    {
+      "id": "materials-near-v2",
+      "title": "材质近景：降低石面噪点",
+      "prompt": "Use case: precise-object-edit. Edit the supplied illustrated river-port material study. Preserve exactly its camera, architecture, perspective, electrical cabinet, amber lamps, pale-mint indicator, workers, boat, wooden crate, doors, cables and composition. Make ONE targeted refinement to surface detail hierarchy: strongly simplify the plaster and stone textures. Remove about two thirds of the small high-contrast speckles, pockmarks and mottling across the stone step faces and plaster wall. Each large stone block should have a mostly quiet broad blue-grey painted face with a few intentional edge chips, a little lower-edge dampness and selected hand-inked seams. Plaster should contain large connected intact ochre-grey areas and only a few grouped peeled patches near architectural joints. Reduce the density of tiny bright ground reflections so wet amber reflections occur in broader broken patches only on a few horizontal edges and shallow puddles. Keep broad light-shadow structure, stone mass and noir mood; do not blur the image or erase geometry. Keep wood directional grain and darker painted metal case with sparse fine edge wear, so stone, wood and metal remain clearly differentiated. Retain hand-painted graphic novel / Fallen Aces inspired game aesthetic, not photorealism. No text, letters, digits, logos, watermark, labels, pseudo-writing or interface anywhere. Single full-frame landscape image.",
+      "reference": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-77832bdd-ad8d-4306-84e3-7e2e5ca8451e.png",
+      "source_output": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-483cbb31-7b3b-4b92-b356-46b9ce3b2f54.png",
+      "image": "art/imagegen/noir-near-studies-2026-09-10/materials-near-v2.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d76c5ce66997080592d7ff283de1e66f70affadf3b6d7f7dde80c4d75b2bba9d"
+    }
+  ],
+  "review": {
+    "character": "人物轮廓、衣着色块与脚底接触可读；没有实现所提议的腿部前景遮挡，不能据图确认引擎融合。背景湿地反光仍较密。",
+    "materials": "v2 相比 v1 降低石块和灰泥碎斑，保留木纹与金属接缝差异。",
+    "status": "user accepted character-near-v1 and materials-near-v2; adopted into jiangcheng_retro_electric_noir@v0.2",
+    "deliverables": [
+      "character-near-v1",
+      "materials-near-v2"
+    ],
+    "adopted_art_direction": {
+      "id": "jiangcheng_retro_electric_noir",
+      "revision": "v0.2"
+    }
+  }
+}

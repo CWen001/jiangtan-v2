@@ -1,0 +1,937 @@
+{
+  "id": "harbor_landing_v3",
+  "revision": "design-03",
+  "title": "灯下旧埠：错层仓廊与第一人称互搏",
+  "art_direction": {
+    "id": "jiangcheng_retro_electric_noir",
+    "revision": "v0.2"
+  },
+  "intent": {
+    "signature": "厚岸墙托起深暖仓廊，石阶向贴水平台下降；低长船棚、人物和电气线缆沿高差逐层显露。",
+    "feeling": "夜雨后的工作码头，暖亮生活空间包在暗色大体块之中。",
+    "invitation": "在石阶口看见下层人物，先沿仓廊近看设备，再下降接近人物与船，回望上层建筑。"
+  },
+  "scope": {
+    "included": [
+      "上层工作廊与南端石阶口",
+      "可进入仓库",
+      "下层会面与泊船平台",
+      "六名可回应拳击的二维人物",
+      "泊船及远岸背景"
+    ],
+    "edges": [
+      "水边与平台端部有可见界限",
+      "首轮船不可登乘或航行",
+      "首轮玩家与NPC近身对打，不含NPC彼此打斗或远程武器"
+    ],
+    "starting_position": "南侧上层石阶口，站姿看向北方下层平台",
+    "player_view": {
+      "perspective": "first_person",
+      "body_presentation": "近景二维手与前臂；空间中的NPC为二维全身动作人物",
+      "attention_rules": "探索时手部偏低，出拳后收回，中心保留对手与地形的观察空间"
+    }
+  },
+  "art": {
+    "composition": {
+      "massing": "西侧厚岸墙托住深仓廊，东侧低泊船与开阔江面形成高低对照",
+      "silhouette": "南端石阶、外挑雨棚、后方窄高塔和低船棚错开",
+      "depth": "近景岸电与墙端，中景人物与船，远景江面和城市",
+      "detail_distribution": "门口设备、阶沿和船舱较丰富；其余墙面和水天保留大块安静区域"
+    },
+    "palette": [
+      {
+        "id": "cool",
+        "color": "#344451",
+        "role": "大面积冷灰背景",
+        "placement": "江面、阴影与远景"
+      },
+      {
+        "id": "warm",
+        "color": "#D3934F",
+        "role": "吸引接近",
+        "placement": "灯罩、门内、船舱"
+      },
+      {
+        "id": "red",
+        "color": "#8C3D2C",
+        "role": "人物识别",
+        "placement": "人物上衣"
+      },
+      {
+        "id": "mint",
+        "color": "#85B9AD",
+        "role": "少量设备信号",
+        "placement": "岸电箱玻璃指示灯"
+      }
+    ],
+    "lighting": [
+      {
+        "id": "door_lamp",
+        "source": "琥珀罩灯",
+        "placement": "仓门两侧",
+        "reach": "门槛、人物一侧、近处石地",
+        "visual_effect": "形成可进入的局部暖区"
+      },
+      {
+        "id": "cabin_lamp",
+        "source": "船舱窗内灯",
+        "placement": "泊船舱内",
+        "reach": "小面积甲板和附近水面",
+        "visual_effect": "吸引视线沿石阶下移"
+      },
+      {
+        "id": "ambient",
+        "source": "阴天暮色",
+        "placement": "天空",
+        "reach": "室外整体",
+        "visual_effect": "冷灰暗部仍能读出高差"
+      }
+    ],
+    "materials": [
+      {
+        "id": "stone",
+        "name": "青灰石块",
+        "appearance": "大片偏暗石面和深拼缝",
+        "graphic_treatment": "少量缺角，安静石面，墨线辅助接缝",
+        "variation": "下缘潮湿，局部水平面有较宽断续亮斑"
+      },
+      {
+        "id": "wood",
+        "name": "旧木板梁",
+        "appearance": "暗褐直纹与拼板",
+        "graphic_treatment": "定向纹理成组，边缘较清楚",
+        "variation": "常接触边缘磨亮"
+      },
+      {
+        "id": "plaster",
+        "name": "灰泥砖墙",
+        "appearance": "灰黄大面与局部露砖",
+        "graphic_treatment": "剥落集中在交接与墙脚",
+        "variation": "内外墙共享画法，室内略暖"
+      },
+      {
+        "id": "metal",
+        "name": "暗色涂装金属",
+        "appearance": "圆润深色外壳、窄亮边",
+        "graphic_treatment": "少量接缝、螺栓与磨损",
+        "variation": "把手磨亮，壳体保持大面"
+      }
+    ],
+    "atmosphere": [
+      {
+        "medium": "江面微波",
+        "placement": "泊船外侧",
+        "behavior": "缓慢方向性运动",
+        "purpose": "让水岸有轻微生命感"
+      },
+      {
+        "medium": "远景潮雾",
+        "placement": "对岸",
+        "behavior": "远处对比逐渐减弱",
+        "purpose": "保留景深与开阔感"
+      }
+    ]
+  },
+  "space": {
+    "orientation": "X东向水面，Y向上，Z南；建筑西侧，上层Y3.2，下层Y0.6。",
+    "zones": [
+      {
+        "id": "upper",
+        "name": "上层工作廊",
+        "setting": "室外",
+        "extent": "X -8..-4，Z -26..10；南端Z5..10向东扩至X0.2；地面Y3.2",
+        "spatial_character": "贴墙窄长工作廊；南端与石阶相接",
+        "visual_anchor": "雨棚和深暖门口",
+        "surface_uses": [
+          {
+            "material_id": "stone",
+            "placement": "地面",
+            "local_treatment": "仓内较干；室外的磨损集中在边缘与墙根"
+          }
+        ]
+      },
+      {
+        "id": "warehouse",
+        "name": "仓库",
+        "setting": "室内",
+        "extent": "X -15..-8，Z -14..-4；地面Y3.2",
+        "spatial_character": "有实际深度的货物与工作台空间",
+        "visual_anchor": "门内灯光与箱堆",
+        "surface_uses": [
+          {
+            "material_id": "wood",
+            "placement": "地面",
+            "local_treatment": "仓内较干；室外的磨损集中在边缘与墙根"
+          }
+        ]
+      },
+      {
+        "id": "lower",
+        "name": "贴水会面平台",
+        "setting": "室外",
+        "extent": "X -4..5.2，Z -28..0.6；地面Y0.6",
+        "spatial_character": "岸墙下方的窄长平台，局部能转身对打",
+        "visual_anchor": "等候人物、船舷与系缆",
+        "surface_uses": [
+          {
+            "material_id": "stone",
+            "placement": "地面",
+            "local_treatment": "仓内较干；室外的磨损集中在边缘与墙根"
+          }
+        ]
+      },
+      {
+        "id": "river",
+        "name": "江面",
+        "setting": "室外",
+        "extent": "X大于5.6",
+        "spatial_character": "不可行走的开阔背景",
+        "visual_anchor": "近船与远岸轮廓",
+        "surface_uses": []
+      }
+    ],
+    "connections": [
+      {
+        "id": "doorway",
+        "from_zone": "upper",
+        "to_zone": "warehouse",
+        "placement": "X=-8，Z=-9",
+        "form": "宽2.6米的深木门洞",
+        "traversal": "E开关门并步行通过",
+        "reveal": {
+          "before": "门框和一根外柱遮住部分货架",
+          "after": "门内工作台显露，转身由门框裁出江面"
+        },
+        "sensory_shift": "从开阔冷暗仓廊进入局部暖光木地板"
+      },
+      {
+        "id": "steps",
+        "from_zone": "upper",
+        "to_zone": "lower",
+        "placement": "X -4..0.2，Z 0..5；向北下降",
+        "form": "宽约4米，总高差2.6米的12级阶梯，两侧厚石收边",
+        "traversal": "无需跳跃的上下行走",
+        "reveal": {
+          "before": "岸墙和踏步遮住人物脚下与船身下部",
+          "after": "人物全身、系缆和开放甲板逐渐展开"
+        },
+        "sensory_shift": "视点降低，上方仓廊体块变高"
+      }
+    ],
+    "relations": [
+      {
+        "id": "bank_layers",
+        "subjects": {
+          "zone_ids": [
+            "upper",
+            "lower"
+          ],
+          "group_ids": [
+            "workfront",
+            "landing",
+            "mooring"
+          ],
+          "element_ids": [
+            "stairs",
+            "courier",
+            "barge"
+          ]
+        },
+        "arrangement": "岸墙托住上层仓廊，石阶口在南侧，下层人物在北侧转折处，船在人物东侧且甲板略低。",
+        "visual_effect": "下降时人物与船体展开，回望能读到上方工作廊。",
+        "importance": "首要；不得将上下层压为单一空平台。"
+      },
+      {
+        "id": "workfront_depth",
+        "subjects": {
+          "zone_ids": [
+            "upper",
+            "warehouse"
+          ],
+          "group_ids": [
+            "workfront"
+          ],
+          "element_ids": [
+            "warehouse_shell",
+            "shore_power"
+          ]
+        },
+        "arrangement": "雨棚突出，门洞内退，后方有较高窄体块；设备靠近南侧可接近的位置。",
+        "visual_effect": "前景曲线设备、中景暖门与远处高屋顶形成层次。",
+        "importance": "保留进退与轮廓；小零件数量可简化。"
+      },
+      {
+        "id": "shore_to_boat",
+        "subjects": {
+          "zone_ids": [
+            "upper",
+            "lower",
+            "river"
+          ],
+          "group_ids": [
+            "workfront",
+            "mooring"
+          ],
+          "element_ids": [
+            "shore_power",
+            "barge"
+          ]
+        },
+        "arrangement": "电缆沿西墙根向北延伸，再沿岸墙到下层系泊点，最后跨水连到船首。",
+        "visual_effect": "少量实用科技贯通岸船，普通工作场所具有架空特色。",
+        "importance": "保留来去与连接，不让悬空线缆横断主要通道。"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "id": "warehouse_shell",
+      "name": "仓库与工作廊",
+      "zone_ids": [
+        "upper",
+        "warehouse"
+      ],
+      "placement": "西侧X=-8朝东，门中心Z=-9",
+      "visual_role": "主画面重体块与可进入的暖光源",
+      "form": {
+        "silhouette": "低长雨棚与后方不齐屋顶、窄高灯塔体块",
+        "proportions": "门面约28米长；仓内净高4米；门宽2.6米",
+        "parts": [
+          {
+            "name": "门洞",
+            "shape": "厚侧壁和木门扇",
+            "placement": "中段向内退"
+          },
+          {
+            "name": "雨棚",
+            "shape": "深约2.4米、薄顶厚边，斜撑",
+            "placement": "门外较低高度"
+          },
+          {
+            "name": "后方高体块",
+            "shape": "带无字窄灯窗的窄塔",
+            "placement": "门面北后方"
+          }
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "plaster",
+          "placement": "墙",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        },
+        {
+          "material_id": "wood",
+          "placement": "梁柱和门",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        }
+      ],
+      "representation": {
+        "geometry": "门洞、墙厚、梁柱为真实三维",
+        "surface_images": "墙面与木纹贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "支撑、地面及墙面交接具有厚度",
+        "lighting": "局部灯光保留暗面，材质主要靠块面和少量边缘读清",
+        "occlusion_and_angles": "在到达、下层回望和侧看视点保持相同构造与位置"
+      }
+    },
+    {
+      "id": "shore_power",
+      "name": "岸电设备",
+      "zone_ids": [
+        "upper"
+      ],
+      "placement": "X=-7.6，Z=2.3，上层墙面",
+      "visual_role": "克制的复古科技特色",
+      "form": {
+        "silhouette": "竖向圆肩暗壳、一侧陶瓷接头与成束线缆",
+        "proportions": "壳高1.3米，窄于人的肩宽两倍",
+        "parts": [
+          {
+            "name": "机壳",
+            "shape": "圆肩、厚折边、窄亮边",
+            "placement": "靠墙上部"
+          },
+          {
+            "name": "观察窗",
+            "shape": "小圆形青绿玻璃",
+            "placement": "机壳上半部"
+          },
+          {
+            "name": "陶瓷接头",
+            "shape": "较浅的短节叠层",
+            "placement": "机壳侧边"
+          }
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "metal",
+          "placement": "机壳",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        }
+      ],
+      "representation": {
+        "geometry": "圆角壳、按钮和电缆为三维",
+        "surface_images": "表面磨损贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "支撑、地面及墙面交接具有厚度",
+        "lighting": "局部灯光保留暗面，材质主要靠块面和少量边缘读清",
+        "occlusion_and_angles": "在到达、下层回望和侧看视点保持相同构造与位置"
+      }
+    },
+    {
+      "id": "stairs",
+      "name": "岸墙石阶",
+      "zone_ids": [
+        "upper",
+        "lower"
+      ],
+      "placement": "X -4..0.2，Z 0..5",
+      "visual_role": "近景高差与前后层次",
+      "form": {
+        "silhouette": "宽踏面、厚墙端、侧边连续下降",
+        "proportions": "12级总高差2.6米",
+        "parts": [
+          {
+            "name": "踏面",
+            "shape": "宽完整石面",
+            "placement": "逐级向北降低"
+          },
+          {
+            "name": "侧墙",
+            "shape": "实厚岸墙，顶部略不齐",
+            "placement": "两侧收边"
+          }
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "stone",
+          "placement": "整体",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        }
+      ],
+      "representation": {
+        "geometry": "台阶与岸墙为三维",
+        "surface_images": "石材表面细节贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "支撑、地面及墙面交接具有厚度",
+        "lighting": "局部灯光保留暗面，材质主要靠块面和少量边缘读清",
+        "occlusion_and_angles": "在到达、下层回望和侧看视点保持相同构造与位置"
+      }
+    },
+    {
+      "id": "barge",
+      "name": "低长泊船",
+      "zone_ids": [
+        "river"
+      ],
+      "placement": "中心X=7.8，Z=-8，沿南北停泊",
+      "visual_role": "低矮船舱与暖窗形成次焦点",
+      "form": {
+        "silhouette": "低船壳、偏后短舱、低棚段与露天船首",
+        "proportions": "长约15米、宽3.4米；船舱只占局部长度",
+        "parts": [
+          {
+            "name": "船首",
+            "shape": "留空甲板与窄护舷",
+            "placement": "南段接近玩家"
+          },
+          {
+            "name": "棚舱",
+            "shape": "木骨架与低垂暗布",
+            "placement": "中后段"
+          },
+          {
+            "name": "舱口",
+            "shape": "朝岸侧退入、局部灯照",
+            "placement": "西侧朝平台"
+          }
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "wood",
+          "placement": "船板",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        },
+        {
+          "material_id": "metal",
+          "placement": "外壳和五金",
+          "local_treatment": "边缘与操作处磨损，保留完整大面"
+        }
+      ],
+      "representation": {
+        "geometry": "船体、船舷与船舱为三维",
+        "surface_images": "木纹与窗内细节贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "吃水线与系缆连接岸边",
+        "lighting": "局部灯光保留暗面，材质主要靠块面和少量边缘读清",
+        "occlusion_and_angles": "在到达、下层回望和侧看视点保持相同构造与位置"
+      }
+    },
+    {
+      "id": "courier",
+      "name": "送货人",
+      "zone_ids": [
+        "lower"
+      ],
+      "placement": "X=-0.6,Y=0.6,Z=-5.5，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "瘦长红衣和鸭舌帽",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    },
+    {
+      "id": "porter",
+      "name": "搬运工",
+      "zone_ids": [
+        "lower"
+      ],
+      "placement": "X=-1,Y=0.6,Z=-13，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "宽肩、浅袖和深背心",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    },
+    {
+      "id": "electrician",
+      "name": "电工",
+      "zone_ids": [
+        "upper"
+      ],
+      "placement": "X=-5.7,Y=3.2,Z=-1，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "短发、灰青上衣与短围裙",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    },
+    {
+      "id": "boatman",
+      "name": "船工",
+      "zone_ids": [
+        "lower"
+      ],
+      "placement": "X=3.4,Y=0.6,Z=-18，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "瘦长灰蓝短衣和软帽",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    },
+    {
+      "id": "watchman",
+      "name": "看守",
+      "zone_ids": [
+        "upper"
+      ],
+      "placement": "X=-5.7,Y=3.2,Z=-15，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "高瘦棕长外套",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    },
+    {
+      "id": "cargo_worker",
+      "name": "货运女工",
+      "zone_ids": [
+        "warehouse"
+      ],
+      "placement": "X=-11.5,Y=3.2,Z=-10，脚底位置",
+      "visual_role": "生活人物；靠近或挑战时清楚回应，平时保持局部活动",
+      "form": {
+        "silhouette": "敦实赭黄短衣和头巾",
+        "proportions": "成人尺度约1.75至1.95米；身份与体型沿用六人探索图",
+        "parts": [
+          {
+            "name": "头肩",
+            "shape": "轮廓明确，避免满面碎线",
+            "placement": "身体上方"
+          },
+          {
+            "name": "双手",
+            "shape": "与胸口、头部留出负空间",
+            "placement": "待机低位，戒备抬起"
+          }
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "身体碰撞和地面定位体积",
+        "surface_images": "二维透明动作图，保留同一角色身份",
+        "flat_elements": "角色图像本身"
+      },
+      "integration": {
+        "contact": "脚底固定于所属地面，接触阴影随角色",
+        "lighting": "共享所在区域冷暖；不使用高亮外描边",
+        "occlusion_and_angles": "存在于世界空间，墙柱可遮挡，转身观察保持人物可读"
+      },
+      "performance": {
+        "everyday": "平时放松站立和轻微重心变化",
+        "actions": [
+          {
+            "name": "直拳",
+            "preparation": "抬手并收肩",
+            "key_pose": "一臂伸向对手，另一手护脸",
+            "recovery": "收拳回戒备"
+          }
+        ],
+        "reactions": "受击躯干偏移，击倒后横卧于地面",
+        "view_readability": "手、头肩和躯干分离，避免背景吞没拳头"
+      }
+    }
+  ],
+  "dressing": [
+    {
+      "id": "work_props",
+      "zone_id": "upper",
+      "contents": "成组货箱、麻袋、门内工作台",
+      "arrangement": "靠墙与柱边，避开主通道",
+      "visual_role": "工作痕迹与近景轮廓",
+      "surface_uses": [
+        {
+          "material_id": "wood",
+          "placement": "箱板与台面",
+          "local_treatment": "方向纹理与少量边磨损"
+        }
+      ]
+    },
+    {
+      "id": "mooring_props",
+      "zone_id": "lower",
+      "contents": "绳柱、绳圈、少量箱桶与系缆",
+      "arrangement": "沿岸边疏密变化，人物附近留空",
+      "visual_role": "岸船连接与近看回报",
+      "surface_uses": []
+    }
+  ],
+  "initial_state": [
+    "上层入口开始，仓门打开，工作区灯亮",
+    "六名NPC平时中立，E挑战或玩家命中后只与玩家对打",
+    "船停泊；水面微动；无NPC互相打斗"
+  ],
+  "experience": [
+    {
+      "id": "arrival",
+      "zone_ids": [
+        "upper"
+      ],
+      "relation_ids": [
+        "bank_layers",
+        "workfront_depth"
+      ],
+      "cue": "下层红衣人物和上层暖门口",
+      "action": "在石阶口环顾",
+      "visual_payoff": "读到上下平台和岸墙厚度",
+      "capability_note": "第一人称观察与移动"
+    },
+    {
+      "id": "workfront",
+      "zone_ids": [
+        "upper",
+        "warehouse"
+      ],
+      "relation_ids": [
+        "workfront_depth",
+        "shore_to_boat"
+      ],
+      "cue": "近处圆肩岸电箱与灯光",
+      "action": "沿廊近看并推门进入",
+      "visual_payoff": "设备接头、门洞和工作台层层显露",
+      "capability_note": "E开关门"
+    },
+    {
+      "id": "descent",
+      "zone_ids": [
+        "upper",
+        "lower"
+      ],
+      "relation_ids": [
+        "bank_layers"
+      ],
+      "cue": "石阶方向和人物",
+      "action": "步行下阶",
+      "visual_payoff": "人物脚下、船舷及甲板展开",
+      "capability_note": "正常步行上下阶"
+    },
+    {
+      "id": "brawl",
+      "zone_ids": [
+        "lower"
+      ],
+      "relation_ids": [
+        "bank_layers"
+      ],
+      "cue": "接近人物后可挑战",
+      "action": "E挑战或直接出拳；鼠标右键格挡",
+      "visual_payoff": "NPC戒备、预备、反击与受击，玩家手部对应动作",
+      "capability_note": "玩家与NPC拳击、阻挡、受击及击倒",
+      "encounters": [
+        {
+          "actor_ids": [
+            "courier"
+          ],
+          "warning": "先抬拳戒备，再收肩预备",
+          "action": "接近并向玩家出拳",
+          "spatial_pressure": "局部平台有后退空间，岸边保留边界",
+          "readability": "浅手臂与深衣服分离",
+          "transition": "NPC击倒停止攻击；玩家倒下可R重置"
+        }
+      ]
+    }
+  ],
+  "visual_groups": [
+    {
+      "id": "workfront",
+      "name": "仓门工作区",
+      "members": {
+        "element_ids": [
+          "warehouse_shell",
+          "shore_power",
+          "electrician",
+          "watchman",
+          "cargo_worker"
+        ],
+        "dressing_ids": [
+          "work_props"
+        ]
+      },
+      "form": {
+        "silhouette": "低雨棚、深门洞、错落屋顶与近景曲线设备",
+        "proportions": "门洞为主体，设备与人维持工作尺度",
+        "layering": "柱在前，设备及门框居中，门内货物更深"
+      },
+      "visual_effect": "暖亮工作口有深度，靠近才读到局部科技"
+    },
+    {
+      "id": "landing",
+      "name": "石阶与会面平台",
+      "members": {
+        "element_ids": [
+          "stairs",
+          "courier",
+          "porter"
+        ],
+        "dressing_ids": []
+      },
+      "form": {
+        "silhouette": "阶沿、厚墙端与人物错开",
+        "proportions": "人物在中景仍有清楚分量",
+        "layering": "岸墙遮住下层，下降后展开人物和船舷"
+      },
+      "visual_effect": "有真实上下穿行的身体尺度"
+    },
+    {
+      "id": "mooring",
+      "name": "泊船与岸边连接",
+      "members": {
+        "element_ids": [
+          "barge",
+          "boatman"
+        ],
+        "dressing_ids": [
+          "mooring_props"
+        ]
+      },
+      "form": {
+        "silhouette": "低船壳、错开舱棚、开放船首",
+        "proportions": "船长显著大于短舱，岸与船的高差可读",
+        "layering": "系缆在前、甲板在中、舱口退入"
+      },
+      "visual_effect": "船是有多个可使用空间的整体，不是发光木盒"
+    }
+  ]
+}

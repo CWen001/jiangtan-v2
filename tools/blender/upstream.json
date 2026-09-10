@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/ahujasid/blender-mcp",
+  "commit": "5f8ddaf6e987c4aa0c3467fcc548838b28f64477",
+  "package_version": "1.9.1",
+  "blender_version": "4.5.13 LTS",
+  "blender_build_hash": "daeeeca98fb0",
+  "blender_download": "https://download.blender.org/release/Blender4.5/blender-4.5.13-macos-arm64.dmg",
+  "blender_dmg_sha256": "663ce944257c61ff1d6aa09e15c8f57bbd8d59023adb2fa7edde33a9ed960b53",
+  "telemetry": false,
+  "external_asset_services": false,
+  "transport": "Python MCP SDK stdio client, not dynamically registered in Codex"
+}

@@ -1,0 +1,201 @@
+{
+  "id": "nightjar_courtyard",
+  "revision": "draft-01",
+  "title": "雨夜唱片店：场景主方案提案",
+  "art_direction": {"id": "noir_comic", "revision": "draft-01"},
+  "intent": {
+    "signature": "高暗砖楼夹住一间较矮的木制唱片店；偏西的圆窗与门灯组成暖亮竖线，东侧弧形橱窗向小院微微凸出。",
+    "feeling": "入口狭窄而冷，店前忽然展开；大片暗色包住少量暖亮，使人愿意靠近细看。",
+    "invitation": "先看见地面的暖色断续反光，再绕过墙角看见完整店面；窗内封套吸引驻足，入口后方的暖木色引人进入。"
+  },
+  "scope": {
+    "included": ["一段狭巷", "店前小院", "唱片店一层室内", "狭巷转角与店门过渡"],
+    "edges": [
+      "狭巷南端接未设计的港口街道",
+      "店面上层只参与远观构图，本方案不设计可进入的二层",
+      "两侧高楼为围合背景，本方案不包含其内部"
+    ],
+    "starting_position": "狭巷南端向北行走，最初只能看到院口墙面和地面反光。"
+  },
+  "art": {
+    "composition": {
+      "massing": "约两层高的唱片店被明显更高的两侧砖楼围住；从狭巷进入约一间小院宽的开口，水平展开与高围合同时出现。",
+      "silhouette": "方直砖楼与店面偏西圆窗形成对比，门上雨棚切出不对称横线；近看的橱窗弧度提供第二层识别。",
+      "depth": "入口墙角先遮店面，院内低陈设提供中景，店面凹凸与窗内陈列提供近看深度；高楼主要保留暗色轮廓。",
+      "detail_distribution": "细节集中在门把附近、橱窗、唱片架与人物；高处墙面、院心和店内主通道保持低密度。"
+    },
+    "palette": [
+      {"id": "cold_base", "color": "蓝黑与低饱和灰青", "role": "围合与暗部基底", "placement": "高楼阴影、狭巷与院边"},
+      {"id": "brick_mid", "color": "压暗的铁锈红", "role": "暗部中的材质温度", "placement": "两侧砖墙和店面上层"},
+      {"id": "warm_focus", "color": "旧木棕与琥珀黄", "role": "主视觉焦点", "placement": "圆窗、门灯、橱窗与一层内部"},
+      {"id": "figure_accent", "color": "低饱和酒红与浅米色", "role": "室内的人物识别", "placement": "接头人的外套与脸部"}
+    ],
+    "lighting": [
+      {"id": "sky_fill", "source": "阴雨夜空的冷色环境光", "placement": "狭巷和院落上方", "reach": "室外顶面、墙边与通道；室内窗边只保留少量冷色", "visual_effect": "暗处仍可辨形体，避免全黑墙面"},
+      {"id": "entry_lamp", "source": "有遮罩的暖色门灯", "placement": "店面西侧入口上方", "reach": "门框、门前少量地面和雨棚下方", "visual_effect": "形成可接近的亮区，灯光没有照满整个小院"},
+      {"id": "window_glow", "source": "橱窗内藏灯与上层圆窗的微光", "placement": "店面东侧橱窗和西侧入口上方圆窗", "reach": "封套陈列与邻近窗框；上层微光主要停留在窗内", "visual_effect": "圆窗提供远看记忆点，橱窗提供近看吸引力"},
+      {"id": "counter_light", "source": "室内柜台上方的一盏暖灯", "placement": "店内北侧", "reach": "柜台、人物脸部和近处木架", "visual_effect": "人物从室内暖暗背景中分离，衣服不被照成鲜艳霓虹红"}
+    ],
+    "materials": [
+      {"id": "old_brick", "name": "旧砖", "appearance": "暗红砖面与近黑砖缝", "graphic_treatment": "只强调部分砖缝与缺角，保留大片整块暗面", "variation": "墙根更湿暗，窗下形成短流痕，高处细节减少"},
+      {"id": "painted_wood", "name": "深色旧木", "appearance": "深棕漆面露出少量浅木色", "graphic_treatment": "宽木纹顺结构走向，磨损用少量不规则短线", "variation": "门边、窗台和柜台前缘磨损较多"},
+      {"id": "aged_metal", "name": "旧金属", "appearance": "灰青暗面与窄亮边", "graphic_treatment": "折边清楚，锈迹以局部色块出现", "variation": "雨棚接缝、外露边缘有积水和局部锈色"},
+      {"id": "display_glass", "name": "陈列玻璃", "appearance": "以透见陈列为主，边缘有少量反光", "graphic_treatment": "选择性亮线和大块淡反光，不铺满白色高光", "variation": "室外边缘有细水迹，中心保持可看清陈列"},
+      {"id": "wet_paving", "name": "湿石板", "appearance": "暗灰不规则大块面，局部浅积水", "graphic_treatment": "少量裂缝连成方向性，反光是不连续色块", "variation": "院边更湿，雨棚下与门槛附近较干"},
+      {"id": "printed_paper", "name": "旧纸与印刷封套", "appearance": "米白底色、少量褪色红蓝图形", "graphic_treatment": "大标题与大图形优先，小字只作有限节奏", "variation": "海报有翘边，唱片封套的边缘磨损较轻"},
+      {"id": "cloth", "name": "漫画衣料", "appearance": "外套酒红，内搭灰米色", "graphic_treatment": "用少数宽折面解释衣服体积，避免每处衣褶都描线", "variation": "领口与袖口有轻微明暗变化，不添加满身随机污迹"}
+    ],
+    "atmosphere": [
+      {"medium": "雨", "placement": "露天狭巷与小院", "behavior": "雨丝在亮区更明显，雨棚滴水集中于外缘；店内不下雨", "purpose": "使亮区有空间厚度，并强化跨门后的包裹感"},
+      {"medium": "局部微动", "placement": "门侧海报下角与雨棚边缘", "behavior": "偶尔轻动，主体建筑和窗内陈列稳定", "purpose": "给静态场所少量生命感，不让所有元素同时运动"},
+      {"medium": "声音提案", "placement": "室外雨面与店内唱机附近", "behavior": "穿过店门后雨声衰减，室内低声音乐更近", "purpose": "辅助室内外过渡；概念图不承担声音效果验证"}
+    ]
+  },
+  "space": {
+    "orientation": "北为唱片店所在方向。面向店面的北向观察中，西在左、东在右；镜头回望时继续使用此方位，不重新定义左右。",
+    "zones": [
+      {
+        "id": "alley", "name": "入口狭巷", "setting": "露天室外",
+        "extent": "宽约两人并行，南北长约八米；北端需向东绕过墙角进入小院西南角。",
+        "spatial_character": "高墙夹住窄通道，上方只露一条天空；出口前墙角遮住店面。",
+        "visual_anchor": "北端地面断续暖色反光，暗示东侧开口之外存在光源。",
+        "surface_uses": [
+          {"material_id": "old_brick", "placement": "两侧墙面", "local_treatment": "视线高度少量管道痕迹，上部简化"},
+          {"material_id": "wet_paving", "placement": "地面", "local_treatment": "反光集中在北端向东延伸的低处"}
+        ]
+      },
+      {
+        "id": "court", "name": "店前小院", "setting": "露天室外，北侧门前局部有雨棚",
+        "extent": "约八米东西宽、六米南北深；北侧店面宽约七米，两侧楼体明显更高。",
+        "spatial_character": "比狭巷横向展开，仍有高墙围合；院心保持可步行和观察的空地。",
+        "visual_anchor": "storefront 的圆窗、入口和向南微凸的 record_window。",
+        "surface_uses": [
+          {"material_id": "old_brick", "placement": "东西围合墙", "local_treatment": "店面附近才增加少量残留海报印迹"},
+          {"material_id": "wet_paving", "placement": "院内地面", "local_treatment": "院心反光断续；没有覆盖全地面的镜面水池"}
+        ]
+      },
+      {
+        "id": "shop", "name": "唱片店一层", "setting": "室内",
+        "extent": "约七米东西宽、六米南北深、不到三米净高；入口在南墙西侧。",
+        "spatial_character": "低于室外围合的暖木色房间；东侧陈列较密，西侧从入口到柜台保留清楚通道。",
+        "visual_anchor": "北侧 counter 与其西端附近的 contact。",
+        "surface_uses": [
+          {"material_id": "painted_wood", "placement": "地面、墙面下半部与门窗内侧", "local_treatment": "地板纹理朝南北延伸，通道保持低细节"},
+          {"material_id": "old_brick", "placement": "墙面上半部的少量露砖", "local_treatment": "受暖光后仍比主要木架更暗"}
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "id": "corner", "from_zone": "alley", "to_zone": "court",
+        "placement": "狭巷北端与小院西南角之间", "form": "绕过墙角向东进入，无台阶",
+        "traversal": "步行绕角，在小院内转向北观察店面",
+        "reveal": {"before": "只能看到地面暖反光与一小段雨棚边", "after": "店面、圆窗与橱窗依次从遮挡后出现"},
+        "sensory_shift": "横向视野展开，雨声保持，暖色面积增加"
+      },
+      {
+        "id": "doorway", "from_zone": "court", "to_zone": "shop",
+        "placement": "北侧店面西三分之一处", "form": "低门槛与向室内开启的单门",
+        "traversal": "推门向北进入，门扇向西侧墙收拢，留出向北的通路",
+        "reveal": {"before": "窗中可窥见部分陈列，人物仍被店内物件部分遮住", "after": "西侧通道与北侧柜台展开，接头人面部清楚"},
+        "sensory_shift": "从冷湿高围合进入较低、较暖的干燥空间；雨声变远"
+      }
+    ],
+    "relations": [
+      "storefront 位于 court 北边，并构成 shop 的南面；其上层不属于可进入范围。",
+      "record_window 始终在 doorway 东侧；storefront 的圆窗位于 doorway 上方，二者位置不会随镜头翻转。",
+      "canopy 覆盖 doorway 及其东侧一小段窗边，不遮住上方圆窗。",
+      "counter 位于 shop 北侧，contact 在柜台西端后方；从西侧通道靠近时能看见部分腿脚。",
+      "从 shop 向南回望，西侧入口位于画面右侧；record_window 在画面左侧。"
+    ]
+  },
+  "elements": [
+    {
+      "id": "storefront", "name": "唱片店立面", "zone_ids": ["court", "shop"],
+      "placement": "小院北缘，朝南；下层为店铺，上层为背景立面。",
+      "visual_role": "整个场景的主形象，压在更高更暗的楼体之间。",
+      "form": {"silhouette": "宽而偏低的方形店面，上层偏西圆窗提供单一弧形强调", "proportions": "约七米宽、两层高；一层入口偏西，东侧留给 record_window", "parts": "上层旧砖、圆窗、下层木饰面与入口；record_window 和 canopy 的具体造型见各自物件"},
+      "surface_uses": [
+        {"material_id": "old_brick", "placement": "上层", "local_treatment": "圆窗周围稍清楚，其余上层归并为暗面"},
+        {"material_id": "painted_wood", "placement": "一层门框及饰面", "local_treatment": "门把附近露出浅木色"}
+      ],
+      "representation": {"geometry": "门洞、圆窗洞口和立面进退有真实厚度", "surface_images": "砖缝、木纹、原创店名字样与门侧小幅海报", "flat_elements": "海报可用贴面图像；整片立面不作为一张平面背景"},
+      "integration": {"contact": "墙根与地面接缝清楚，门槛较干", "lighting": "门灯强调入口，圆窗微光保留在窗内", "occlusion_and_angles": "从院落侧看能读出窗台与门洞厚度，立面不随观察方向旋转"}
+    },
+    {
+      "id": "record_window", "name": "弧形唱片橱窗", "zone_ids": ["court", "shop"],
+      "placement": "店面东侧，朝南微凸约半米；背部陈列空间位于室内。",
+      "visual_role": "近看时的主要发现，以弧度、玻璃层次和封套图形形成停留点。",
+      "form": {"silhouette": "浅弧形横向窗体，厚木边框", "proportions": "约两米多宽、一人胸口至头顶高度，凸出程度不占据主通路", "parts": "三个竖向玻璃分格、上下木边框、凹入陈列台和错落封套"},
+      "surface_uses": [
+        {"material_id": "painted_wood", "placement": "边框与窗台", "local_treatment": "窗台外沿较浅，角部有少量墨线磨损"},
+        {"material_id": "display_glass", "placement": "三片玻璃", "local_treatment": "中间透见封套，反光主要落在边缘"},
+        {"material_id": "printed_paper", "placement": "陈列封套", "local_treatment": "一个大圆形图案为主，两三个小色块辅助，避免等距排满"}
+      ],
+      "representation": {"geometry": "凸出的窗台、框架与凹入的陈列层有厚度", "surface_images": "木纹、磨损、水迹和封套上的图形", "flat_elements": "封套本体可以是薄片，沿陈列台有前后错位"},
+      "integration": {"contact": "窗框嵌入立面，不悬浮在墙前", "lighting": "暖光从陈列内照出，局部映到相邻木框与地面", "occlusion_and_angles": "从室外侧看有框架遮挡和封套视差，从室内看到陈列背侧；反射不过度遮住主体"}
+    },
+    {
+      "id": "canopy", "name": "拼接金属雨棚", "zone_ids": ["court"],
+      "placement": "入口上方，沿店面向东多伸出一段，覆盖橱窗西端。",
+      "visual_role": "以不对称横线切开立面，并在走近时形成头顶遮挡。",
+      "form": {"silhouette": "薄而有折边的斜棚，东端略长", "proportions": "伸出约一米，上方仍可完整看到圆窗", "parts": "两块拼接金属面、窄折边、两根墙面支撑"},
+      "surface_uses": [{"material_id": "aged_metal", "placement": "棚面与支撑", "local_treatment": "拼接处有一条锈色，外缘有局部水滴"}],
+      "representation": {"geometry": "折边、支撑和坡度有厚度", "surface_images": "锈色与接缝笔触", "flat_elements": "无独立二维陈设"},
+      "integration": {"contact": "支撑固定在店面，连接点可读", "lighting": "上面偏冷，下面接受门灯暖光", "occlusion_and_angles": "从门下仰看能读出结构，不以单面贴图代替整个棚体"}
+    },
+    {
+      "id": "counter", "name": "旧木唱片柜台", "zone_ids": ["shop"],
+      "placement": "店内北侧，从中部向东延伸，西端留出人物与行走空间。",
+      "visual_role": "建立室内中景与人物的前后关系，提供能近看的木材和封套表面。",
+      "form": {"silhouette": "长而低的木柜台，西端倒角", "proportions": "高约人物腰部，长度占室内宽度不到一半", "parts": "厚台面、较暗柜身、少量台面封套与小灯"},
+      "surface_uses": [{"material_id": "painted_wood", "placement": "柜台整体", "local_treatment": "前沿磨损连续，柜身大面安静"}],
+      "representation": {"geometry": "台面厚度、柜身和倒角有体积", "surface_images": "木纹与边缘磨损", "flat_elements": "少量封套薄片靠在台面，图形归 printed_paper 的规则"},
+      "integration": {"contact": "柜身落地，台面物件接触面清楚", "lighting": "台面亮、柜身暗，避免台面比人物脸部更抢眼", "occlusion_and_angles": "从入口只部分遮挡人物；西侧靠近后人物腿脚局部可见"}
+    },
+    {
+      "id": "contact", "name": "接头人", "zone_ids": ["shop"],
+      "placement": "柜台西端后方，面向南侧入口，身体略偏向室内中心。",
+      "visual_role": "室内小范围的色彩与表情焦点，保持与陈设相同的漫画世界感。",
+      "form": {"silhouette": "短发、短外套、自然垂落的手臂，一只手持信封", "proportions": "成年人正常尺度，外套上身轮廓略方，手与脸适度概括", "parts": "深色短发、酒红外套、浅内搭、深裤与鞋、浅色信封"},
+      "surface_uses": [
+        {"material_id": "cloth", "placement": "外套和内搭", "local_treatment": "外套只有几块主要折面，脸部和手留足清晰度"},
+        {"material_id": "printed_paper", "placement": "信封", "local_treatment": "简洁浅色形状，无大段文字"}
+      ],
+      "representation": {"geometry": "不要求三维人物造型；呈现时保留接地和遮挡关系", "surface_images": "二维人物的线条、衣服色块和面部明暗", "flat_elements": "人物使用二维图像；本方案提出正面与侧向观察的一致造型需求，具体方向图制作留给资产阶段"},
+      "integration": {"contact": "脚底对齐地面，不能随着镜头上下漂移", "lighting": "脸部接受柜台灯的暖色，阴影与周围物件相容", "occlusion_and_angles": "柜台可真实遮住下半身；侧向靠近时轮廓、持物手和衣服特征需保持一致，不把当前一张正面素材视为已满足"}
+    }
+  ],
+  "dressing": [
+    {
+      "id": "yard_clutter", "zone_id": "court", "contents": "一两只低木箱、一个旧金属桶、少量湿纸片",
+      "arrangement": "集中在院落东侧墙根，中间与门前留空；高低和朝向略错开，不排成均匀一列。",
+      "visual_role": "形成低处中景与生活痕迹，衬托主要橱窗。",
+      "surface_uses": [
+        {"material_id": "painted_wood", "placement": "木箱", "local_treatment": "比店面更暗，削弱纹理密度"},
+        {"material_id": "aged_metal", "placement": "桶", "local_treatment": "只留一小段亮边"}
+      ]
+    },
+    {
+      "id": "record_shelves", "zone_id": "shop", "contents": "东墙两组唱片架及少量唱片封套",
+      "arrangement": "中部一组较密，入口附近较疏；封套有朝前展示和侧向收纳的区别。",
+      "visual_role": "形成室内材质和图形密度，与西侧安静通道对比。",
+      "surface_uses": [
+        {"material_id": "painted_wood", "placement": "架体", "local_treatment": "同店内木材，边线比封套图形更安静"},
+        {"material_id": "printed_paper", "placement": "封套", "local_treatment": "延续橱窗图形语言，但主色更弱"}
+      ]
+    }
+  ],
+  "initial_state": [
+    "室外持续小雨，室内干燥；所有设计光源已亮。",
+    "店门关闭；人物站在柜台西端后方，持信封。",
+    "上层不可进入，本轮体验不包含跳跃或攀爬。"
+  ],
+  "experience": [
+    {"id": "discover_store", "zone_ids": ["alley", "court"], "cue": "北端转角处的暖色反光", "action": "步行绕角，转向北", "visual_payoff": "从窄暗片段展开为完整店面，圆窗和橱窗成为两个不同尺度的焦点", "capability_note": "依赖基础步行与环顾；这里是新布局的体验提案"},
+    {"id": "inspect_window", "zone_ids": ["court"], "cue": "橱窗中一个大圆形封套图案与透出的暖光", "action": "从侧面靠近并略微移动视点", "visual_payoff": "看见窗框厚度、前后错开的封套与选择性玻璃反光", "capability_note": "基础步行与观察即可"},
+    {"id": "enter_shop", "zone_ids": ["court", "shop"], "cue": "雨棚下的暖亮门口", "action": "推门进入", "visual_payoff": "头顶和侧面围合变近，雨声退后，木材细节与人物展开", "capability_note": "需要推门交互；不代表本提案布局已在原型中实现"},
+    {"id": "look_at_contact", "zone_ids": ["shop"], "cue": "柜台灯下的脸部与浅色信封", "action": "沿西侧通道靠近人物", "visual_payoff": "人物从陈设间分离，线条和光色与环境融合", "capability_note": "本轮仅观察，不依赖对话或任务奖励"},
+    {"id": "look_back", "zone_ids": ["shop", "court"], "cue": "身后的冷色门洞", "action": "转身朝南回望", "visual_payoff": "暖木色门框包住冷雨小院，来路成为新的构图", "capability_note": "基础转身与观察即可"}
+  ]
+}

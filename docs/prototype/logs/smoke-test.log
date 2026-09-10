@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SMOKE PASS: player, closed-door collision, open-door passage, contact ray targeting, letter, gated exit, completion
+ASSETS: ["res://assets/generated/brick.png", "res://assets/generated/floor.png", "res://assets/generated/poster.png", "res://assets/generated/wood.png", "res://assets/generated/records.png", "res://assets/models/street_props.glb", "res://assets/generated/contact.png"]

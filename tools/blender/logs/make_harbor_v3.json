@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-09-10T09:04:10.088154+00:00",
+  "transport": "MCP stdio -> upstream server -> localhost:9876 -> upstream Blender addon",
+  "calls": [
+    {
+      "tool": "get_scene_info",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"name\": \"HarborV3\",\n  \"object_count\": 37,\n  \"objects\": [\n    {\n      \"name\": \"HarborSolid_-1_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_-1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_3\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    }\n  ],\n  \"materials_count\": 11\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "result": "{\n  \"name\": \"HarborV3\",\n  \"object_count\": 37,\n  \"objects\": [\n    {\n      \"name\": \"HarborSolid_-1_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_-1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_3\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    }\n  ],\n  \"materials_count\": 11\n}"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "execute_blender_code",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Code executed successfully: {\"blender\": \"4.5.13 LTS\", \"telemetry_consent\": false, \"addon_server_running\": true, \"services\": {\"polyhaven\": false, \"hyper3d\": false, \"hunyuan3d\": false, \"sketchfab\": false, \"polypizza\": false}}\n",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "result": "Code executed successfully: {\"blender\": \"4.5.13 LTS\", \"telemetry_consent\": false, \"addon_server_running\": true, \"services\": {\"polyhaven\": false, \"hyper3d\": false, \"hunyuan3d\": false, \"sketchfab\": false, \"polypizza\": false}}\n"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "execute_blender_code",
+      "source": "/Users/cwen/Projects/games/learn_fallen_aces/tools/blender/make_harbor_v3.py",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Code executed successfully: Warning: No mesh data to join\nWarning: No mesh data to join\nWarning: No mesh data to join\nWarning: No mesh data to join\nInfo: Saved as \"harbor.blend\"\n17:04:20 | INFO: Starting glTF 2.0 export\n17:04:20 | INFO: Extracting primitive: Cube.976\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.977\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.978\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.979\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.991\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.993\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.999\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1009\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1027\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1064\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1076\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1078\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1082\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1091\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1100\n17:04:20 | INFO: Primitives created: 7\n17:04:20 | INFO: Extracting primitive: Cylinder.630\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1194\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1215\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1260\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1303\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1305\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1323\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1349\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1351\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cylinder.693\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1378\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: hull.002\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1387\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1389\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1422\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cylinder.733\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cylinder.737\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cylinder.741\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1444\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1447\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Finished glTF 2.0 export in 0.06140494346618652 s\n\nHARBOR_V3_EXPORTED 35\n",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "result": "Code executed successfully: Warning: No mesh data to join\nWarning: No mesh data to join\nWarning: No mesh data to join\nWarning: No mesh data to join\nInfo: Saved as \"harbor.blend\"\n17:04:20 | INFO: Starting glTF 2.0 export\n17:04:20 | INFO: Extracting primitive: Cube.976\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.977\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.978\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.979\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.991\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.993\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.999\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1009\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1027\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1064\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1076\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1078\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1082\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1091\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1100\n17:04:20 | INFO: Primitives created: 7\n17:04:20 | INFO: Extracting primitive: Cylinder.630\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1194\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1215\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1260\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1303\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1305\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1323\n17:04:20 | INFO: Primitives created: 5\n17:04:20 | INFO: Extracting primitive: Cube.1349\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1351\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cylinder.693\n17:04:20 | INFO: Primitives created: 2\n17:04:20 | INFO: Extracting primitive: Cube.1378\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: hull.002\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1387\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1389\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cube.1422\n17:04:20 | INFO: Primitives created: 3\n17:04:20 | INFO: Extracting primitive: Cylinder.733\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cylinder.737\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cylinder.741\n17:04:20 | INFO: Primitives created: 1\n17:04:20 | INFO: Extracting primitive: Cube.1444\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Extracting primitive: Cube.1447\n17:04:20 | INFO: Primitives created: 4\n17:04:20 | INFO: Finished glTF 2.0 export in 0.06140494346618652 s\n\nHARBOR_V3_EXPORTED 35\n"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_scene_info",
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"name\": \"HarborV3\",\n  \"object_count\": 35,\n  \"objects\": [\n    {\n      \"name\": \"HarborSolid_-1_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_-1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_3\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    }\n  ],\n  \"materials_count\": 11\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "result": "{\n  \"name\": \"HarborV3\",\n  \"object_count\": 35,\n  \"objects\": [\n    {\n      \"name\": \"HarborSolid_-1_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_-1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_3\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_1\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborDecor_0_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSteps_0_2\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"name\": \"HarborSolid_-1_0\",\n      \"type\": \"MESH\",\n      \"location\": [\n        0.0,\n        0.0,\n        0.0\n      ]\n    }\n  ],\n  \"materials_count\": 11\n}"
+        },
+        "isError": false
+      }
+    }
+  ],
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "BlenderMCP",
+      "title": null,
+      "version": "1.30.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "get_object_info",
+    "get_viewport_screenshot",
+    "execute_blender_code",
+    "get_polyhaven_categories",
+    "search_polyhaven_assets",
+    "download_polyhaven_asset",
+    "set_texture",
+    "get_polyhaven_status",
+    "get_hyper3d_status",
+    "get_sketchfab_status",
+    "search_sketchfab_models",
+    "get_sketchfab_model_preview",
+    "download_sketchfab_model",
+    "get_polypizza_status",
+    "search_polypizza_models",
+    "download_polypizza_model",
+    "generate_hyper3d_model_via_text",
+    "generate_hyper3d_model_via_images",
+    "poll_rodin_job_status",
+    "import_generated_asset",
+    "get_hunyuan3d_status",
+    "generate_hunyuan3d_model",
+    "poll_hunyuan_job_status",
+    "import_generated_asset_hunyuan",
+    "record_trajectory_feedback"
+  ]
+}

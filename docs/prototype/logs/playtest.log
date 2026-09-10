@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M4 Pro
+
+PLAYTEST CHECK: Initial mission state
+PLAYTEST CHECK: Closed door blocks walking
+PLAYTEST CHECK: Door selected by normal proximity/view targeting
+PLAYTEST CHECK: Screenshot /Users/cwen/Projects/games/learn_fallen_aces/docs/prototype/screenshots/playtest/01-door.png
+PLAYTEST CHECK: E opens the door
+PLAYTEST CHECK: Walk through doorway and target contact
+PLAYTEST CHECK: Screenshot /Users/cwen/Projects/games/learn_fallen_aces/docs/prototype/screenshots/playtest/02-contact.png
+PLAYTEST CHECK: E obtains the envelope
+PLAYTEST CHECK: Screenshot /Users/cwen/Projects/games/learn_fallen_aces/docs/prototype/screenshots/playtest/03-envelope.png
+PLAYTEST CHECK: Walk back through doorway to harbor exit
+PLAYTEST CHECK: E completes the delivery slice
+PLAYTEST CHECK: Screenshot /Users/cwen/Projects/games/learn_fallen_aces/docs/prototype/screenshots/playtest/04-completed.png
+PLAYTEST PASS: real movement input, closed-door collision, E door, interior traversal, E contact, return walk, E exit

@@ -1,0 +1,112 @@
+{
+  "id": "nightjar_first_visual_study",
+  "revision": "draft-01",
+  "title": "雨夜唱片店：空间氛围与橱窗造型探索提案",
+  "scene_design": {"id": "nightjar_courtyard", "revision": "draft-01"},
+  "exploration": {
+    "focus": "先判断暗巷到暖店的整体吸引力、橱窗近看层次及二维人物融合，再用一个橱窗局部备选探索更鲜明的轮廓。",
+    "preserve": [
+      "项目约定的漫画线条、块面明暗与细节尺度",
+      "三个区域、两处连接以及南北东西的相对布局",
+      "入口在店面西侧，橱窗在东侧，圆窗在入口上方",
+      "主方案的灯光位置、人物身份和室外雨夜条件"
+    ],
+    "may_vary": [
+      "仅在指定橱窗备选图中改变木边框的局部轮廓和分格表现",
+      "在不改变物件布局与尺度的前提下选择不同取景和画面强调"
+    ]
+  },
+  "views": [
+    {
+      "id": "v_entry",
+      "camera": {"zone_id": "alley", "position": "狭巷北端转角之前约两米", "eye_level": "成人自然站立视高，约1.65米", "look_toward": "北端墙角与其东侧开口", "framing": "宽画面，保留两侧暗墙和下方地面"},
+      "subjects": {"zone_ids": ["alley"], "connection_ids": ["corner"], "element_ids": []},
+      "composition": "近处暗墙夹出窄开口，地面暖色反光向开口引导；完整店面仍被墙角遮住，不为了展示主体而穿透墙体。",
+      "emphasis": "没有看见主店面时，画面是否已能引人走近。",
+      "state_changes": []
+    },
+    {
+      "id": "v_reveal",
+      "camera": {"zone_id": "court", "position": "小院西南角，刚绕过巷口墙角", "eye_level": "约1.65米", "look_toward": "北侧店面，略向东北", "framing": "宽画面，完整店面和两侧高楼下部入画，不采用鸟瞰"},
+      "subjects": {"zone_ids": ["court"], "connection_ids": ["corner", "doorway"], "element_ids": ["storefront", "record_window", "canopy"]},
+      "composition": "巷口墙角留在西侧近景，院心形成安静中景；暖店面从暗楼体间显露，偏西圆窗与入口形成主亮区，东侧橱窗提供较低的第二焦点。",
+      "emphasis": "高暗围合与低暖店面的体块、明暗和轮廓是否足够有辨识度。",
+      "state_changes": []
+    },
+    {
+      "id": "v_inside",
+      "camera": {"zone_id": "shop", "position": "入口内侧约一米，西侧通道", "eye_level": "约1.65米", "look_toward": "北侧柜台与人物，略向东北", "framing": "宽画面，一侧保留近门框，东侧唱片架与北侧人物同框"},
+      "subjects": {"zone_ids": ["shop"], "connection_ids": ["doorway"], "element_ids": ["counter", "contact"]},
+      "composition": "门框提供近景，西侧通道作为较安静的进入面，唱片架是侧向密集背景；柜台灯引导到人物脸部，柜台只遮住人物下身的一部分。",
+      "emphasis": "室内的暖木材、封套图形和二维人物是否同属一种漫画画风，人物是否有落地与遮挡关系。",
+      "state_changes": ["店门向内打开并靠近西侧墙；相对主方案初始状态，其他物件和光源保持不变。"]
+    },
+    {
+      "id": "v_window_close",
+      "camera": {"zone_id": "court", "position": "橱窗东南侧约一米半，位于院内", "eye_level": "约1.55米", "look_toward": "向西北看橱窗的正面与东侧厚度", "framing": "物件近看画面，完整橱窗和少量相邻墙面入画"},
+      "subjects": {"zone_ids": ["court"], "connection_ids": [], "element_ids": ["record_window"]},
+      "composition": "厚木框、玻璃面和凹入陈列层形成前后关系；大圆形封套图形为局部焦点，玻璃反光停留在边缘。",
+      "emphasis": "橱窗是否具有可读的真实厚度、手绘材质与近看吸引力。",
+      "state_changes": []
+    },
+    {
+      "id": "v_contact_close",
+      "camera": {"zone_id": "shop", "position": "柜台西端西南方的通道中", "eye_level": "约1.65米", "look_toward": "东北方的接头人", "framing": "人物在环境中的近看画面，保留全身或可见腿脚、柜台边和地面"},
+      "subjects": {"zone_ids": ["shop"], "connection_ids": [], "element_ids": ["contact", "counter"]},
+      "composition": "人物是主体，柜台从画面一侧切入，背景唱片架的对比降低；保留足够地面判断脚底接触，不把人物提取到纯色背景上。",
+      "emphasis": "人物线条、持物手、衣服色块、受光与三维陈设是否融合。",
+      "state_changes": ["店门向内打开并靠近西侧墙；人物位置、朝向和持信封状态沿用主方案。"]
+    },
+    {
+      "id": "v_threshold",
+      "camera": {"zone_id": "court", "position": "门外雨棚下，距门槛一步", "eye_level": "约1.65米", "look_toward": "沿 doorway 向北看室内", "framing": "第一人称宽画面，门框、门扇与部分室内同框"},
+      "subjects": {"zone_ids": ["court", "shop"], "connection_ids": ["doorway"], "element_ids": ["storefront", "canopy", "counter", "contact"]},
+      "composition": "雨棚下方成为近处暗顶，暖门框包住逐渐展开的室内；门扇向西打开，人物只初步显露，不在未越门时提前展示整个房间。",
+      "emphasis": "推门时冷湿到暖干的过渡，以及头顶与侧面围合变近。",
+      "state_changes": ["店门正向室内开启，约打开一半，门扇向西收拢；其他状态沿用主方案。"]
+    },
+    {
+      "id": "v_return",
+      "camera": {"zone_id": "shop", "position": "西侧通道中部，距南面店门约三米", "eye_level": "约1.65米", "look_toward": "朝南略偏西看打开的店门", "framing": "第一人称宽画面，温暖内墙包围冷色室外开口"},
+      "subjects": {"zone_ids": ["shop", "court"], "connection_ids": ["doorway"], "element_ids": ["storefront", "record_window"]},
+      "composition": "西侧门洞在画面右侧，东侧橱窗背面在画面左侧；门外露出冷色湿地和部分院墙。只看到符合门洞视线的来路，不要求从此处看穿转角。",
+      "emphasis": "回望是否得到新的冷暖框景，并保持原有门窗方位和空间连续性。",
+      "state_changes": ["店门向内打开并靠近西侧墙；其他状态沿用主方案。"]
+    }
+  ],
+  "variants": [
+    {
+      "id": "window_tapered_frame",
+      "changes": [
+        {"target_kind": "element", "target_id": "record_window", "change": "在原有窗洞与凸出范围内，将边框改为上部略收、下部略宽的形状；保留三个竖向玻璃分格，侧框外角有轻微斜切。"}
+      ],
+      "expected_gain": "加强木框轮廓的原创识别性，让近看图中的漫画形体比标准方直框更鲜明。",
+      "preserve": ["窗的位置、朝向和总体尺度", "三个玻璃分格与原有封套陈列", "灯光与材料", "其他主要物件的设计"]
+    }
+  ],
+  "scene_views": [
+    {"id": "img_court", "view_id": "v_reveal", "variant_id": null, "presentation": "16:9 单张空间概念图，成人视高，保留整体体块与明暗，画面不叠加游戏界面。", "reference_deliverable_ids": []},
+    {"id": "img_entry", "view_id": "v_entry", "variant_id": null, "presentation": "16:9 单张空间概念图，展示转角前的遮挡与吸引线索。", "reference_deliverable_ids": ["img_court"]},
+    {"id": "img_inside", "view_id": "v_inside", "variant_id": null, "presentation": "16:9 单张室内概念图，保持与外景一致的店门、木材和人物比例。", "reference_deliverable_ids": ["img_court"]}
+  ],
+  "object_studies": [
+    {"id": "img_window_base", "element_id": "record_window", "view_id": "v_window_close", "variant_id": null, "presentation": "4:3 物件近看图，保持场景内光照和相邻墙面，清楚表现木框、玻璃与封套三个层次。", "reference_deliverable_ids": ["img_court"]},
+    {"id": "img_window_variant", "element_id": "record_window", "view_id": "v_window_close", "variant_id": "window_tapered_frame", "presentation": "4:3 近看备选图，镜头、光照、封套与基准近看图保持一致，只探索指定木框变化。", "reference_deliverable_ids": ["img_window_base"]},
+    {"id": "img_contact", "element_id": "contact", "view_id": "v_contact_close", "variant_id": null, "presentation": "4:3 场景内人物近看图，保留柜台、地面与部分背景；用于研究二维人物融合，尚非透明底人物资产。", "reference_deliverable_ids": ["img_inside"]}
+  ],
+  "storyboards": [
+    {
+      "id": "board_arrival",
+      "variant_id": null,
+      "presentation": "一张有五个编号画格的体验分镜板，按序排列；每格保持宽画面和自然第一人称视高。短说明置于画格外，图形连续性优先于小字排版。声音变化另由文字描述。",
+      "reference_deliverable_ids": ["img_entry", "img_court", "img_inside"],
+      "frames": [
+        {"id": "f01", "view_id": "v_entry", "player_action": "向转角靠近", "visual_change": "起始画面：暗墙之间只有地面暖反光，完整店面还不可见。"},
+        {"id": "f02", "view_id": "v_reveal", "player_action": "绕过墙角并向北看", "visual_change": "视野横向展开，圆窗、入口和橱窗从遮挡后显露。"},
+        {"id": "f03", "view_id": "v_threshold", "player_action": "从院内走到门前并推门", "visual_change": "雨棚靠近头顶，门框包住暖室内，门扇向西开启。"},
+        {"id": "f04", "view_id": "v_inside", "player_action": "跨入室内，沿西侧通道观察", "visual_change": "柜台与人物展开，木材和封套细节变近，室内无雨。"},
+        {"id": "f05", "view_id": "v_return", "player_action": "向内走几步后转身回望", "visual_change": "暖色内墙框住冷雨小院，朝南观察时门右窗左。"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+HARBOR_TEST PASS E closes door
+HARBOR_TEST PASS closed door blocks crossing
+HARBOR_TEST PASS E opens door
+HARBOR_TEST PASS enter warehouse through doorway
+HARBOR_TEST PASS E interacts with 2D character
+HARBOR_TEST PASS descend stairs by normal movement
+HARBOR_TEST PASS ascend stairs without jumping
+HARBOR_TEST COMPLETE

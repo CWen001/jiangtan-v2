@@ -1,0 +1,490 @@
+{
+  "id": "harbor_landing",
+  "revision": "design-01",
+  "title": "灯下旧埠：仓库与泊船",
+  "art_direction": {
+    "id": "jiangcheng_retro_electric_noir",
+    "revision": "v0.2"
+  },
+  "intent": {
+    "signature": "有厚度的暖光仓门与冷灰江面并置，沿石阶下行接近一艘低矮泊船。",
+    "feeling": "雨后、安静但有人生活；熟悉旧港里有一点复古电气的新奇。",
+    "invitation": "先见仓门暖光和红衣人物，靠近读清暗色岸电箱，再沿台阶走到水边回望。"
+  },
+  "scope": {
+    "included": [
+      "上层沿岸步道",
+      "一间仓库",
+      "下层泊船平台",
+      "停泊船只与远景江面"
+    ],
+    "edges": [
+      "两端道路以可见栏杆和堆货收束",
+      "远处城市和航船只作背景",
+      "本轮不包含航行、战斗、任务链或下一段湿地"
+    ],
+    "starting_position": "上层步道南端，面向北侧仓门和江面"
+  },
+  "art": {
+    "composition": {
+      "massing": "西侧仓库深暗长体块，东侧水面低矮开阔，台阶和泊船介于两者之间。",
+      "silhouette": "梁柱与雨棚形成有节奏的直线，岸电箱和灯罩以小尺度曲线形成区别。",
+      "depth": "近处绳柱和箱角，中景门口人物与船舱，远景低对岸轮廓；玩家可以走进仓库再回望江面。",
+      "detail_distribution": "入口、人物与岸电设备较丰富，大墙面、地面中心与水天较安静。"
+    },
+    "palette": [
+      {
+        "id": "cool",
+        "color": "#344451",
+        "role": "大面积冷灰背景",
+        "placement": "江面、阴影与远景"
+      },
+      {
+        "id": "warm",
+        "color": "#D3934F",
+        "role": "吸引接近",
+        "placement": "灯罩、门内、船舱"
+      },
+      {
+        "id": "red",
+        "color": "#8C3D2C",
+        "role": "人物识别",
+        "placement": "人物上衣"
+      },
+      {
+        "id": "mint",
+        "color": "#85B9AD",
+        "role": "少量设备信号",
+        "placement": "岸电箱玻璃指示灯"
+      }
+    ],
+    "lighting": [
+      {
+        "id": "door_lamp",
+        "source": "琥珀罩灯",
+        "placement": "仓门两侧",
+        "reach": "门槛、人物一侧、近处石地",
+        "visual_effect": "形成可进入的局部暖区"
+      },
+      {
+        "id": "cabin_lamp",
+        "source": "船舱窗内灯",
+        "placement": "泊船舱内",
+        "reach": "小面积甲板和附近水面",
+        "visual_effect": "吸引视线沿石阶下移"
+      },
+      {
+        "id": "ambient",
+        "source": "阴天暮色",
+        "placement": "天空",
+        "reach": "室外整体",
+        "visual_effect": "冷灰暗部仍能读出高差"
+      }
+    ],
+    "materials": [
+      {
+        "id": "stone",
+        "name": "青灰石块",
+        "appearance": "大片偏暗石面和深拼缝",
+        "graphic_treatment": "少量缺角，安静石面，墨线辅助接缝",
+        "variation": "下缘潮湿，局部水平面有较宽断续亮斑"
+      },
+      {
+        "id": "wood",
+        "name": "旧木板梁",
+        "appearance": "暗褐直纹与拼板",
+        "graphic_treatment": "定向纹理成组，边缘较清楚",
+        "variation": "常接触边缘磨亮"
+      },
+      {
+        "id": "plaster",
+        "name": "灰泥砖墙",
+        "appearance": "灰黄大面与局部露砖",
+        "graphic_treatment": "剥落集中在交接与墙脚",
+        "variation": "内外墙共享画法，室内略暖"
+      },
+      {
+        "id": "metal",
+        "name": "暗色涂装金属",
+        "appearance": "圆润深色外壳、窄亮边",
+        "graphic_treatment": "少量接缝、螺栓与磨损",
+        "variation": "把手磨亮，壳体保持大面"
+      }
+    ],
+    "atmosphere": [
+      {
+        "medium": "江面微波",
+        "placement": "泊船外侧",
+        "behavior": "缓慢方向性运动",
+        "purpose": "让水岸有轻微生命感"
+      },
+      {
+        "medium": "远景潮雾",
+        "placement": "对岸",
+        "behavior": "远处对比逐渐减弱",
+        "purpose": "保留景深与开阔感"
+      }
+    ]
+  },
+  "space": {
+    "orientation": "Godot 坐标：X 向东/江面，Y 向上，Z 向南；仓库位于西侧，朝东开门。",
+    "zones": [
+      {
+        "id": "upper",
+        "name": "上层沿岸步道",
+        "setting": "室外",
+        "extent": "X -3..5，Z -12..11，高度约1.2米",
+        "spatial_character": "可自由走动的狭长平台，西实东虚",
+        "visual_anchor": "暖光仓门与人物",
+        "surface_uses": [
+          {
+            "material_id": "stone",
+            "placement": "地面和岸墙",
+            "local_treatment": ""
+          }
+        ]
+      },
+      {
+        "id": "warehouse",
+        "name": "仓库内室",
+        "setting": "室内",
+        "extent": "X -11..-3，Z -8..0，地面与步道同高",
+        "spatial_character": "有梁柱厚度的低顶暖空间",
+        "visual_anchor": "门内木箱与工作台",
+        "surface_uses": [
+          {
+            "material_id": "wood",
+            "placement": "地面与梁柱",
+            "local_treatment": ""
+          },
+          {
+            "material_id": "plaster",
+            "placement": "围墙",
+            "local_treatment": ""
+          }
+        ]
+      },
+      {
+        "id": "lower",
+        "name": "下层泊船平台",
+        "setting": "室外",
+        "extent": "X 7.4..10，Z -10..10，高度约0米",
+        "spatial_character": "贴水窄平台，向上可回望仓门",
+        "visual_anchor": "绳柱与低船舱",
+        "surface_uses": [
+          {
+            "material_id": "stone",
+            "placement": "岸面",
+            "local_treatment": ""
+          }
+        ]
+      },
+      {
+        "id": "river",
+        "name": "江面背景",
+        "setting": "不可进入的室外背景",
+        "extent": "泊船以东至远景",
+        "spatial_character": "开阔低矮水面",
+        "visual_anchor": "少量远船灯与对岸剪影",
+        "surface_uses": []
+      }
+    ],
+    "connections": [
+      {
+        "id": "doorway",
+        "from_zone": "upper",
+        "to_zone": "warehouse",
+        "placement": "西侧墙 X=-3，Z=-4附近",
+        "form": "约2.4米宽的深木门洞",
+        "traversal": "步行穿越；门扇可开关",
+        "reveal": {
+          "before": "门框遮住室内一部分",
+          "after": "梁柱、木箱、工作台显露，江面被门洞收成画面"
+        },
+        "sensory_shift": "由冷灰开放空间进入低顶暖空间"
+      },
+      {
+        "id": "steps",
+        "from_zone": "upper",
+        "to_zone": "lower",
+        "placement": "X 5..7.4，沿岸连续石阶",
+        "form": "六级宽踏面下行石阶，总高1.2米",
+        "traversal": "步行上下，无跳跃依赖",
+        "reveal": {
+          "before": "从上层读到船顶和水面",
+          "after": "近看船舷、绳柱与石墙高差"
+        },
+        "sensory_shift": "视点降低，江面接近，仓库体块变高"
+      }
+    ],
+    "relations": [
+      "仓库门永远朝东，镜头改变不移动门和人物",
+      "泊船沿南北方向停在下层平台外侧",
+      "人物位于门外北侧，不挡住门洞或台阶通行"
+    ]
+  },
+  "elements": [
+    {
+      "id": "warehouse_shell",
+      "name": "仓库门面",
+      "zone_ids": [
+        "upper",
+        "warehouse"
+      ],
+      "placement": "西侧长墙与东向入口",
+      "visual_role": "主画面重体块与可进入的暖光源",
+      "form": {
+        "silhouette": "深门洞、厚梁柱和出挑雨棚",
+        "proportions": "普通人尺度；仓库高约6米，人物约1.8米，岸电箱约0.9米高，船约10米长",
+        "parts": [
+          "墙",
+          "柱",
+          "木门框",
+          "梁",
+          "雨棚"
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "plaster",
+          "placement": "墙",
+          "local_treatment": ""
+        },
+        {
+          "material_id": "wood",
+          "placement": "梁柱和门",
+          "local_treatment": ""
+        }
+      ],
+      "representation": {
+        "geometry": "门洞、墙厚、梁柱为真实三维",
+        "surface_images": "墙面与木纹贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "落在区域地面或明确依附墙面",
+        "lighting": "接受区域冷暖，发光不淹没纹理",
+        "occlusion_and_angles": "需要在主视点、门内回望、低平台回望三个视点成立"
+      }
+    },
+    {
+      "id": "shore_power",
+      "name": "岸电箱",
+      "zone_ids": [
+        "upper"
+      ],
+      "placement": "门外北侧的西墙上",
+      "visual_role": "克制的复古科技特色",
+      "form": {
+        "silhouette": "圆角暗色外壳与弯曲电缆",
+        "proportions": "普通人尺度；仓库高约6米，人物约1.8米，岸电箱约0.9米高，船约10米长",
+        "parts": [
+          "机壳",
+          "把手",
+          "玻璃指示灯",
+          "陶瓷节",
+          "线缆"
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "metal",
+          "placement": "机壳",
+          "local_treatment": ""
+        }
+      ],
+      "representation": {
+        "geometry": "圆角壳、按钮和电缆为三维",
+        "surface_images": "表面磨损贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "落在区域地面或明确依附墙面",
+        "lighting": "接受区域冷暖，发光不淹没纹理",
+        "occlusion_and_angles": "需要在主视点、门内回望、低平台回望三个视点成立"
+      }
+    },
+    {
+      "id": "courier",
+      "name": "等候人物",
+      "zone_ids": [
+        "upper"
+      ],
+      "placement": "X=-1.3，Z=-6，站在上层地面",
+      "visual_role": "可接近的生活中心",
+      "form": {
+        "silhouette": "清楚的帽子、肩线和裤脚",
+        "proportions": "普通人尺度；仓库高约6米，人物约1.8米，岸电箱约0.9米高，船约10米长",
+        "parts": [
+          "帽",
+          "上衣",
+          "长裤",
+          "挎包"
+        ]
+      },
+      "surface_uses": [],
+      "representation": {
+        "geometry": "仅碰撞和接触定位使用简单体积",
+        "surface_images": "二维漫画透明人物，固定Y轴朝向相机",
+        "flat_elements": "人物为独立二维图像"
+      },
+      "integration": {
+        "contact": "落在区域地面或明确依附墙面",
+        "lighting": "接受区域冷暖，发光不淹没纹理",
+        "occlusion_and_angles": "需要在主视点、门内回望、低平台回望三个视点成立"
+      }
+    },
+    {
+      "id": "barge",
+      "name": "停泊驳船",
+      "zone_ids": [
+        "river"
+      ],
+      "placement": "X=12，Z=-3，贴下层平台外侧",
+      "visual_role": "低矮船舱与暖窗形成次焦点",
+      "form": {
+        "silhouette": "长低船身和较小棚舱",
+        "proportions": "普通人尺度；仓库高约6米，人物约1.8米，岸电箱约0.9米高，船约10米长",
+        "parts": [
+          "船壳",
+          "甲板",
+          "船舱",
+          "窗",
+          "篷顶"
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "wood",
+          "placement": "船板",
+          "local_treatment": ""
+        },
+        {
+          "material_id": "metal",
+          "placement": "外壳和五金",
+          "local_treatment": ""
+        }
+      ],
+      "representation": {
+        "geometry": "船体、船舷与船舱为三维",
+        "surface_images": "木纹与窗内细节贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "落在区域地面或明确依附墙面",
+        "lighting": "接受区域冷暖，发光不淹没纹理",
+        "occlusion_and_angles": "需要在主视点、门内回望、低平台回望三个视点成立"
+      }
+    },
+    {
+      "id": "stairs",
+      "name": "沿岸石阶",
+      "zone_ids": [
+        "upper",
+        "lower"
+      ],
+      "placement": "平台东缘贯通上下层",
+      "visual_role": "近景高差与前后层次",
+      "form": {
+        "silhouette": "六级宽踏面石阶",
+        "proportions": "普通人尺度；仓库高约6米，人物约1.8米，岸电箱约0.9米高，船约10米长",
+        "parts": [
+          "踏面",
+          "立面",
+          "岸墙"
+        ]
+      },
+      "surface_uses": [
+        {
+          "material_id": "stone",
+          "placement": "整体",
+          "local_treatment": ""
+        }
+      ],
+      "representation": {
+        "geometry": "台阶与岸墙为三维",
+        "surface_images": "石材表面细节贴图",
+        "flat_elements": "按需使用薄片细节"
+      },
+      "integration": {
+        "contact": "落在区域地面或明确依附墙面",
+        "lighting": "接受区域冷暖，发光不淹没纹理",
+        "occlusion_and_angles": "需要在主视点、门内回望、低平台回望三个视点成立"
+      }
+    }
+  ],
+  "dressing": [
+    {
+      "id": "crates",
+      "zone_id": "warehouse",
+      "contents": "几组木箱、工作台、木桶",
+      "arrangement": "沿后墙和门内一侧成组，通道中心留空",
+      "visual_role": "室内有工作痕迹与近看细节",
+      "surface_uses": [
+        {
+          "material_id": "wood",
+          "placement": "箱板",
+          "local_treatment": ""
+        },
+        {
+          "material_id": "metal",
+          "placement": "箍和五金",
+          "local_treatment": ""
+        }
+      ]
+    },
+    {
+      "id": "dock_props",
+      "zone_id": "lower",
+      "contents": "少量绳柱、绳圈、木箱",
+      "arrangement": "靠水侧疏落分布",
+      "visual_role": "构成近景遮挡与尺度参照",
+      "surface_uses": [
+        {
+          "material_id": "wood",
+          "placement": "柱与箱",
+          "local_treatment": ""
+        }
+      ]
+    }
+  ],
+  "initial_state": [
+    "暮色，门初始打开，室内和船舱灯亮",
+    "人物在门外等候，可互动点头",
+    "船只停泊，不启动航行"
+  ],
+  "experience": [
+    {
+      "id": "arrival",
+      "zone_ids": [
+        "upper"
+      ],
+      "cue": "仓门暖光和红衣人物",
+      "action": "沿步道走近",
+      "visual_payoff": "人物、门洞与岸电设备细节逐渐清楚",
+      "capability_note": "步行与观察"
+    },
+    {
+      "id": "threshold",
+      "zone_ids": [
+        "upper",
+        "warehouse"
+      ],
+      "cue": "厚门框后有暖空间",
+      "action": "进出仓库并回望",
+      "visual_payoff": "江面被框景，室内外尺度和冷暖转换",
+      "capability_note": "门交互与碰撞"
+    },
+    {
+      "id": "waterline",
+      "zone_ids": [
+        "upper",
+        "lower"
+      ],
+      "cue": "下层绳柱与船窗暖光",
+      "action": "走下石阶再向仓库回望",
+      "visual_payoff": "水面接近，仓墙高差显露，人物产生前后遮挡",
+      "capability_note": "连续步行与台阶通行"
+    }
+  ]
+}

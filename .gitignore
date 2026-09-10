@@ -1,4 +1,7 @@
 .DS_Store
-play/index.wasm
-play/index.pck
-_site/
+game/.godot/
+tools/blender/.venv/
+tools/blender/vendor/
+*.blend1
+
+.dream-loop/

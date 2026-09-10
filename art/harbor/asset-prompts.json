@@ -1,0 +1,37 @@
+[
+  {
+    "id": "courier",
+    "ref": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-near-studies-2026-09-10/character-near-v1.png",
+    "prompt": "Create a production-ready single 2D game character sprite extracted from the supplied approved character image: the ordinary East Asian male dock courier in dark flat cap, rust-red work shirt/jacket, dark trousers, brown shoes and small olive shoulder bag. Preserve his hand-inked noir comic shape and two/three broad value groups. Full body head to soles entirely visible, arms relaxed, slight three-quarter front pose. Character fills 90 percent of image height with small even clear margins. GENUINELY TRANSPARENT RGBA background. No background, floor, ground shadow, scenery, color swatch, border, lettering, logos, numbers or watermark. Neutral gentle light, no glowing edges, no photorealism. A single isolated sprite for a first-person 3D game, not a sheet.",
+    "source": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-e744fa76-73ec-4c41-af77-b807685a2e70.png",
+    "image": "game/assets/harbor/courier.png"
+  },
+  {
+    "id": "stone",
+    "ref": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-near-studies-2026-09-10/materials-near-v2.png",
+    "prompt": "Generate a square seamless game albedo texture, orthographic flat surface, inspired by the subdued stone in supplied hand-painted noir harbor. Large irregular blue-grey stone paving blocks with deep narrow ink seams. Four or five broad rows. Mostly quiet blue-grey stone faces, sparse broad edge chips, barely a few cracks, painterly broad shapes. Clearly drawn contours but no high frequency grain or all-over speckles. Soft uniform neutral illumination, no directional light, no reflections baked in, no vignette, no perspective, no border, no text, no numbers, no watermark. Seamless edges. This will be tiled on true 3D steps and paving.",
+    "source": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-510d0bd3-b66d-421d-855f-5e779bf24f6e.png",
+    "image": "game/assets/harbor/stone.png"
+  },
+  {
+    "id": "plaster",
+    "ref": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-near-studies-2026-09-10/materials-near-v2.png",
+    "prompt": "Generate a square seamless game albedo texture: warm grey ochre old plaster of this approved noir comic harbor wall. Mostly connected quiet painted plaster faces with just a few grouped worn patches, sparse thin dark ink cracks and darker broad staining toward patches. Large-scale hand-painted graphic novel brushwork, not photographic grunge, no granular all-over noise. Flat orthographic surface, neutral even light, no objects, no trim, no lighting gradient, no perspective, no border, absolutely no text letters numbers logos or watermarks. Seamless surface.",
+    "source": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-55c68e9b-b390-4ad5-9998-b2db0a267c45.png",
+    "image": "game/assets/harbor/plaster.png"
+  },
+  {
+    "id": "metal",
+    "ref": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-near-studies-2026-09-10/materials-near-v2.png",
+    "prompt": "Generate a square seamless game albedo surface texture inspired by the dark electrical cabinet in reference: broad nearly intact charcoal-blue painted steel coating, very sparse fine hand-drawn scuffs and small patches of worn graphite metal. Flat orthographic material surface only, no cabinet object, no bolts, no panels, no handles, no lighting gradients, no baked specular, no border. Restrained hand-painted noir graphic novel game material, quiet large fields, no photo noise, no rust blanket, no text numbers or logos. Seamlessly tileable.",
+    "source": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-11682518-2fd8-42dd-905a-8b6117232f49.png",
+    "image": "game/assets/harbor/metal.png"
+  },
+  {
+    "id": "sky",
+    "ref": "/Users/cwen/Projects/games/learn_fallen_aces/art/imagegen/noir-light-retrotech-2026-09-10/b-retro-electric-port.png",
+    "prompt": "Generate a seamless equirectangular panoramic sky texture with 2:1 aspect ratio for the approved noir comic old river port at blue-grey rainy dusk. Sky only: layered broad storm clouds, low-contrast painterly dark ink-blue upper sky, muted blue-grey horizon with a very faint desaturated amber break. Upper half clouds; lower half a simple cool dark continuation without objects, for spherical environment mapping. No river, buildings, horizon skyline, sun disc, moon, stars, lightning, ships, people, labels, text, numbers or watermarks. Quiet graphic novel atmosphere, hand-painted wide cloud shapes, not dramatic fantasy, no photographic microdetail.",
+    "source": "/Users/cwen/.codex/generated_images/01a083d0-f390-7470-a5c7-b4e0e91dc8b8/exec-c0cc847d-fa3c-496e-b5fb-f3a4062ac023.png",
+    "image": "game/assets/harbor/sky.png"
+  }
+]

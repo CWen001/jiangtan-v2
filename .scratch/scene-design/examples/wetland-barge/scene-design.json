@@ -1,0 +1,175 @@
+{
+  "id": "wetland_crossing",
+  "revision": "draft-01",
+  "title": "雨夜湿地驳船：移动场景主方案提案",
+  "art_direction": {"id": "noir_comic", "revision": "draft-01"},
+  "intent": {
+    "signature": "低而长的驳船带着一小团暖灯，在黑绿芦苇与青灰水面间前进；两座不同轮廓的石拱桥先成为远处黑影，再从头顶掠过。",
+    "feeling": "雨中被水面和草岸包围，船灯提供有限的安全感；开阔、收紧、桥下压暗与重新显露交替发生。",
+    "invitation": "先在码头看到被灯照亮的湿木甲板，登船后前方桥洞和反光引人继续观察；敌人的显露利用已有层次，不用满画面闪光覆盖景色。"
+  },
+  "scope": {
+    "included": ["出发码头", "芦苇水道", "第一座低宽拱桥", "开阔湿地水面", "第二座较高单孔拱桥", "终点靠岸处"],
+    "edges": ["起点后方陆地不展开", "终点石阶上方是尚未设计的下一场景", "两岸芦苇只包含影响航道视野的部分"],
+    "starting_position": "出发码头的登船踏板旁，驳船尚未离岸。",
+    "handoffs": [
+      {"id": "landing_to_land", "zone_id": "landing", "next_scene_ref": null, "arrival_state": "驳船在石阶西侧靠稳，玩家已站到最低一级平台，追击船未进入这处靠岸支汊。", "continuity": "下一场景入口沿石阶向北上行；西侧下方仍是驳船，东侧是固定暖灯，雨夜与湿石材质连续。"}
+    ]
+  },
+  "art": {
+    "composition": {
+      "massing": "低矮船体与水平水面作为稳定基底，草岸形成两侧起伏，桥体成为少数跨越画面的重形。",
+      "silhouette": "驳船平直船首与低护舷、第一桥低宽三孔、第二桥较高单孔各有不同轮廓；芦苇高低不齐，不排成均匀墙。",
+      "depth": "近处船舷与绳索随视点移动，中景水面与草岸滑过，远景桥体和岸灯逐渐接近；薄雾分离远近层次。",
+      "detail_distribution": "细节集中在船头可触表面、人物轮廓、近桥拱边和终点石阶；远芦苇归并为暗块，水面保留安静间隔。"
+    },
+    "palette": [
+      {"id": "water_base", "color": "青灰与墨蓝", "role": "空间基底", "placement": "水面、雨幕和远处天空"},
+      {"id": "reed_dark", "color": "近黑苔绿", "role": "两侧围合", "placement": "芦苇和近岸阴影"},
+      {"id": "warm_path", "color": "暗琥珀黄", "role": "移动焦点与终点提示", "placement": "船灯、局部甲板与终点固定灯"},
+      {"id": "threat_accent", "color": "低饱和铁红与灰米色", "role": "威胁的局部识别", "placement": "追击船窄色带、敌人的衣领和面部"}
+    ],
+    "lighting": [
+      {"id": "rain_sky", "source": "冷色阴雨夜空", "placement": "全段水路上方", "reach": "水面、草岸外缘、桥顶；桥洞内部明显减少", "visual_effect": "保留水面与岸线分界，不把夜景压成全黑"},
+      {"id": "barge_lamp", "source": "有遮罩的船首暖灯", "anchor_element_id": "barge", "placement": "船首偏左、低于玩家视线", "reach": "船首甲板、护舷与前方一小段水面，随船移动", "visual_effect": "给画面稳定的近景光色，远桥不被整座照亮"},
+      {"id": "pursuit_lamp", "source": "追击船船首冷白小灯", "anchor_element_id": "pursuit_boat", "placement": "船首低位", "reach": "追击船前方窄水带与近处飞沫", "visual_effect": "先出现移动亮点，再显露船体和驾驶者"},
+      {"id": "landing_light", "source": "终点岸灯", "anchor_element_id": "landing_beacon", "placement": "石阶东侧", "reach": "固定石阶与近岸水面", "visual_effect": "与船灯形成两个不同位置的暖亮点，靠近后才连成照明区域"}
+    ],
+    "materials": [
+      {"id": "water", "name": "雨夜水面", "appearance": "大块青灰暗面，反光被短水纹切断", "graphic_treatment": "用方向明确的少量亮线与色块表现流动，不画成均匀闪点", "variation": "船边水纹较密，远水面归并；桥下更暗，出桥后冷色重新展开"},
+      {"id": "wet_timber", "name": "湿木", "appearance": "深棕木板与局部浅磨边", "graphic_treatment": "宽木纹顺船体纵向，钉孔和裂纹集中在近景", "variation": "甲板受灯处更暖，积水和绳圈下方更暗"},
+      {"id": "stone", "name": "旧石桥与石阶", "appearance": "冷灰石块与深色接缝", "graphic_treatment": "拱边结构清楚，大面少画砖块；苔痕形成局部大斑块", "variation": "水线附近湿黑，桥腹压暗，终点台阶受灯处显出细节"},
+      {"id": "reed", "name": "湿地芦苇", "appearance": "黑绿草团与少量灰青叶缘", "graphic_treatment": "先画团块轮廓，再选几根杆叶形成近看层次", "variation": "近岸高低错落，远岸合并；敌人显露处保留能读出头肩的缝隙"},
+      {"id": "metal", "name": "旧船用金属", "appearance": "暗灰折面与窄亮边", "graphic_treatment": "接缝与护舷轮廓优先，锈迹为局部色块", "variation": "船首与侧缘有磨损，追击船铁红色带是少量强调"},
+      {"id": "clothing", "name": "雨中漫画衣料", "appearance": "暗色外衣、灰米脸部和少量浅边", "graphic_treatment": "大衣褶和肩部轮廓概括，手与面部保持清楚", "variation": "雨中肩顶偏亮，草丛遮挡处保留暗色连续块"}
+    ],
+    "atmosphere": [
+      {"medium": "雨与薄雾", "placement": "水面以上与桥外", "behavior": "近处雨丝由船灯显出，远雾分开桥和草岸；桥腹下雨丝减少", "purpose": "表现移动空间的层次及穿桥时的包裹感"},
+      {"medium": "水纹和船尾波", "placement": "随两艘船移动的水面附近", "behavior": "驳船波纹缓慢展开，追击船水纹更尖、更急", "purpose": "以视觉差异说明速度关系，不依赖界面速度数字"},
+      {"medium": "声音提案", "placement": "雨面、发动机与桥洞", "behavior": "桥下回声变近，草岸威胁先有短动静，追击船发动机声随接近变强", "purpose": "辅助方向与显露；静帧只表现其可见对应线索"}
+    ]
+  },
+  "space": {
+    "orientation": "水路总体从南侧出发码头向北推进，中段向东北展开，再经第二桥后向西北转入终点支汊。左右舷按驳船当时船首方向定义，世界东、西不随镜头翻转。",
+    "zones": [
+      {"id": "dock", "name": "出发码头", "setting": "室外岸边", "extent": "一小段木码头与旁边泊位，足够看清完整驳船", "spatial_character": "岸上静止结构与低船体并置", "visual_anchor": "船首暖灯和湿木踏板", "surface_uses": [{"material_id": "wet_timber", "placement": "码头与踏板", "local_treatment": "木板方向与船体方向不同，便于看出交界"}, {"material_id": "water", "placement": "泊位", "local_treatment": "码头下方较暗"}]},
+      {"id": "reeds", "name": "芦苇水道", "setting": "室外湿地", "extent": "宽度只比驳船明显宽一些，两岸仍有通行水隙", "spatial_character": "两侧高草收紧视野，船前仍能看见一段水面", "visual_anchor": "近左岸草团的缺口与远处第一桥", "surface_uses": [{"material_id": "reed", "placement": "两岸", "local_treatment": "左岸前景略高，缺口不被零碎叶片填满"}, {"material_id": "water", "placement": "航道", "local_treatment": "长条冷反光引向桥洞"}]},
+      {"id": "low_bridge", "name": "第一座桥下", "setting": "室外桥洞过渡", "extent": "低宽三孔石桥的中孔通行区，船与站立观察者有明确净空", "spatial_character": "桥腹从远处拱形变为头顶重暗面", "visual_anchor": "bridge_a 的低宽拱边", "surface_uses": [{"material_id": "stone", "placement": "桥腹与近墩", "local_treatment": "底部压暗，边缘可读"}, {"material_id": "water", "placement": "桥下水面", "local_treatment": "暖船灯反光被桥墩切断"}]},
+      {"id": "open_water", "name": "开阔湿地", "setting": "室外水面", "extent": "足够追击船从侧后方接近的一段开阔水域", "spatial_character": "草岸退远，侧方可观察；远处第二桥成为新目标", "visual_anchor": "侧后方移动冷灯与前方单孔桥", "surface_uses": [{"material_id": "water", "placement": "主体画面", "local_treatment": "大面安静，两艘船附近水纹较密"}, {"material_id": "reed", "placement": "远岸", "local_treatment": "归并轮廓，不逐根描叶"}]},
+      {"id": "high_bridge", "name": "第二座桥及转弯", "setting": "室外桥下与支汊入口", "extent": "较高单孔石拱桥，出桥后路线向西北转弯", "spatial_character": "高拱先框住天空，船进入后桥墩与岸墙重新收紧侧视线", "visual_anchor": "bridge_b 的高窄拱形和远处暖岸灯", "surface_uses": [{"material_id": "stone", "placement": "拱边与弯道岸墙", "local_treatment": "拱边较清楚，侧墙遮挡追击方向"}, {"material_id": "water", "placement": "通行水道", "local_treatment": "转弯时反光方向改变"}]},
+      {"id": "landing", "name": "终点石阶", "setting": "室外靠岸支汊", "extent": "能停靠驳船的小平台和向北上行的石阶", "spatial_character": "水面运动收束为固定地面，近岸结构重新清楚", "visual_anchor": "landing_beacon 与被照亮的最低一级台阶", "surface_uses": [{"material_id": "stone", "placement": "台阶与平台", "local_treatment": "踏步前缘暖亮，积水在低处"}, {"material_id": "water", "placement": "泊位西侧", "local_treatment": "停靠后波纹逐渐减弱"}]}
+    ],
+    "connections": [
+      {"id": "dock_to_reeds", "from_zone": "dock", "to_zone": "reeds", "placement": "码头北侧水口", "form": "由泊位进入草岸水道", "traversal": "驳船离岸后缓慢转正", "reveal": {"before": "码头结构仍占据一侧", "after": "两侧被芦苇包围，前方水路成为主体"}, "sensory_shift": "岸灯退远，发动机与雨水成为近声"},
+      {"id": "reeds_to_low", "from_zone": "reeds", "to_zone": "low_bridge", "placement": "芦苇水道北端", "form": "进入第一桥中孔", "traversal": "船沿通行孔前进", "reveal": {"before": "岸边人物可从草团间显露", "after": "桥体挡住岸边来向，桥腹掠过头顶"}, "sensory_shift": "天空亮度降低，回声变近"},
+      {"id": "low_to_open", "from_zone": "low_bridge", "to_zone": "open_water", "placement": "第一桥另一侧", "form": "水面向东北展开", "traversal": "船驶出桥洞并缓慢偏向东北", "reveal": {"before": "画面被桥洞框住", "after": "宽水面和侧方追击方向同时展开"}, "sensory_shift": "雨幕重新明显，侧方声音更可定位"},
+      {"id": "open_to_high", "from_zone": "open_water", "to_zone": "high_bridge", "placement": "开阔水域前端", "form": "进入第二座单孔桥", "traversal": "驳船先进入，追击船在后方减速调整", "reveal": {"before": "追击船可在侧后方被观察", "after": "桥墩与弯道逐步截断后方视线"}, "sensory_shift": "侧向开放变为上方高拱、两侧收紧"},
+      {"id": "high_to_landing", "from_zone": "high_bridge", "to_zone": "landing", "placement": "第二桥后向西北的支汊", "form": "转弯进入靠岸平台", "traversal": "驳船减速靠稳，玩家下船", "reveal": {"before": "只见岸灯局部光点", "after": "石阶、平台和下一场景入口方向清楚"}, "sensory_shift": "运动减缓，脚下从船板变成固定石面"}
+    ],
+    "relations": [
+      "bridge_a 是低宽三孔，bridge_b 是较高单孔，不能因镜头改变互换造型。",
+      "驳船沿水路经过区域，不同时占据全部区域；船灯和甲板陈设始终随驳船。",
+      "岸边伏击者位于第一桥之前；追击船的主要接近发生在两桥之间的开阔水面。",
+      "第二桥后的弯道岸墙截断后方观察线；不以假定追击船比驳船更宽来解释减速。",
+      "终点灯固定在石阶东侧；驳船停在平台西侧，下一场景从石阶向北延续。"
+    ],
+    "routes": [
+      {"id": "main_waterway", "name": "码头到终点支汊", "segments": [
+        {"id": "r_board", "zone_ids": ["dock"], "connection_ids": [], "course": "泊位，登船前后船不动", "visual_rhythm": "静止码头与船体近看"},
+        {"id": "r_depart", "zone_ids": ["dock", "reeds"], "connection_ids": ["dock_to_reeds"], "course": "离开码头向北进入水道", "visual_rhythm": "固定岸灯退远，近处船舷保持稳定"},
+        {"id": "r_reeds", "zone_ids": ["reeds"], "connection_ids": [], "course": "沿草岸间隙向第一桥前进", "visual_rhythm": "两侧压近，局部缺口显露敌人"},
+        {"id": "r_low", "zone_ids": ["low_bridge"], "connection_ids": ["reeds_to_low"], "course": "穿第一桥中孔", "visual_rhythm": "低拱放大、桥腹压暗、出孔前见宽水面"},
+        {"id": "r_open", "zone_ids": ["open_water"], "connection_ids": ["low_to_open"], "course": "偏向东北，在开阔水面驶向第二桥", "visual_rhythm": "侧方展开，追击船进入可见范围"},
+        {"id": "r_high", "zone_ids": ["high_bridge"], "connection_ids": ["open_to_high"], "course": "穿第二桥，开始向西北支汊转向", "visual_rhythm": "高拱与近桥墩交替遮挡侧后方"},
+        {"id": "r_land", "zone_ids": ["landing"], "connection_ids": ["high_to_landing"], "course": "向岸灯靠近、减速、停靠", "visual_rhythm": "移动光点接近固定暖灯，最终上岸回看船"}
+      ]}
+    ]
+  },
+  "elements": [
+    {
+      "id": "barge", "name": "玩家乘坐的驳船", "zone_ids": ["dock"], "placement": "初始在码头旁，船首朝北。",
+      "motion": {"mode": "route", "route_id": "main_waterway", "behavior": "低速稳定前行，转向缓和；设计意图是玩家能在甲板上观察，具体驾驶方式待后续玩法决定。"},
+      "visual_role": "贯穿全段的稳定近景与有限暖光来源。",
+      "form": {"silhouette": "低长船体、平直船首、窄护舷", "proportions": "甲板可容玩家站立和少量货物，船长明显大于船宽，过桥保留站立净空", "parts": "湿木甲板、金属船缘、偏左船灯、低货箱和绳圈"},
+      "surface_uses": [{"material_id": "wet_timber", "placement": "甲板", "local_treatment": "前方木纹形成方向线，脚边保留细节"}, {"material_id": "metal", "placement": "护舷", "local_treatment": "窄亮边，避免高亮遮挡水面"}],
+      "representation": {"geometry": "船体、舷边、甲板和货箱需要真实厚度及移动视差", "surface_images": "木纹、锈色、磨损与少量船身图形", "flat_elements": "少量标签可贴面；主要绳圈保留可读体积"},
+      "integration": {"contact": "船体与水线连续，人物站在甲板上，货物不漂浮", "lighting": "船灯随船，天空冷光随所在环境变化", "occlusion_and_angles": "近船舷可遮住一小部分水面；岸上观察时能看清完整船体"}
+    },
+    {
+      "id": "bridge_a", "name": "低宽三孔石桥", "zone_ids": ["low_bridge"], "placement": "固定横跨第一段水道，中孔与路线对齐。",
+      "visual_role": "首次头顶压暗的重形，截断芦苇伏击方向。",
+      "form": {"silhouette": "低宽桥面与三个扁拱", "proportions": "中孔足以让驳船及站立观察者通过，侧孔更小", "parts": "厚拱边、桥墩、暗桥腹、局部苔痕"},
+      "surface_uses": [{"material_id": "stone", "placement": "桥体", "local_treatment": "中孔边缘清楚，远侧孔简化"}],
+      "representation": {"geometry": "拱洞与桥墩有真实体积", "surface_images": "石缝和水线苔痕", "flat_elements": "少量贴面污迹"},
+      "integration": {"contact": "桥墩进入水中，有连续水线", "lighting": "桥腹压暗，船灯只照近处一小块", "occlusion_and_angles": "接近、桥下仰看和驶离时为同一座桥，不用单张拱桥剪影代替"}
+    },
+    {
+      "id": "bridge_b", "name": "高单孔石桥", "zone_ids": ["high_bridge"], "placement": "固定在开阔水面尽端，出桥后向西北转弯。",
+      "visual_role": "区别于第一桥的高拱轮廓，重新组织前方与侧后方视线。",
+      "form": {"silhouette": "较高的单孔拱与厚侧墩", "proportions": "拱高明显大于第一桥，通行区仍留足船宽", "parts": "单拱、两侧厚墩、与弯道相连的岸墙"},
+      "surface_uses": [{"material_id": "stone", "placement": "桥与岸墙", "local_treatment": "高拱轮廓更清楚，岸墙保持暗面"}],
+      "representation": {"geometry": "拱洞、桥墩和遮挡弯道的岸墙", "surface_images": "简化石面与潮湿痕迹", "flat_elements": "局部苔斑贴面"},
+      "integration": {"contact": "岸墙和桥墩与水面形成连续关系", "lighting": "拱口有冷天空，远处岸灯只形成局部暖点", "occlusion_and_angles": "桥墩逐步遮挡追击船，不能让敌船穿透墙面保持可见"}
+    },
+    {
+      "id": "reed_raiders", "name": "草岸伏击者小组", "zone_ids": ["reeds"], "placement": "初始藏在左侧近岸草团后。",
+      "motion": {"mode": "local", "region_ids": ["reeds"], "behavior": "在固定草岸位置抬起头肩、显露手臂；不跟随驳船漂移。"},
+      "visual_role": "在统一暗草团中制造可辨识的头肩和动作线。",
+      "form": {"silhouette": "两名人物错开显露，一高一低，帽檐与肩部轮廓有差别", "proportions": "正常成年尺度，露出范围从头肩到上半身", "parts": "深色雨衣、灰米面部、持武器的手臂"},
+      "surface_uses": [{"material_id": "clothing", "placement": "人物", "local_treatment": "面部和手比草岸略清楚，不靠全身发光识别"}],
+      "representation": {"geometry": "人物可保持二维，草岸提供实际前后遮挡", "surface_images": "人物轮廓、衣褶与面部色块", "flat_elements": "不同显露姿态需保持同一人物造型，具体动画资产另行设计"},
+      "integration": {"contact": "人物立在岸上，不悬在水面", "lighting": "冷环境光为主，动作瞬间的局部亮点不改变整体人物配色", "occlusion_and_angles": "芦苇遮住下身；船驶过后人物退到侧后方，被桥体遮挡"}
+    },
+    {
+      "id": "pursuit_boat", "name": "追击小船", "zone_ids": ["open_water"], "placement": "初始停在开阔水面东侧远草湾后，不在玩家起点视野内。",
+      "motion": {"mode": "local", "region_ids": ["open_water", "high_bridge"], "behavior": "从侧后方接近驳船，短暂并近后落到后方；到第二桥减速转向，逐渐被桥墩和弯道遮住。"},
+      "visual_role": "用更尖、更短的轮廓和移动冷灯区别于驳船。",
+      "form": {"silhouette": "尖船首、短窄船身、后部站立驾驶者", "proportions": "小于驳船，接近时仍与驳船有明确水面间隔", "parts": "尖船首、低船灯、铁红窄色带、后部操纵位置"},
+      "surface_uses": [{"material_id": "metal", "placement": "船身", "local_treatment": "铁红窄带为识别特征，其他表面偏暗"}],
+      "representation": {"geometry": "船身与护边需要真实厚度", "surface_images": "色带和磨损", "flat_elements": "驾驶者见 pursuit_driver"},
+      "integration": {"contact": "水线、尾波与船体运动方向相符", "lighting": "冷白小灯随船运动", "occlusion_and_angles": "靠近时能见侧面与船首，后退时轮廓缩小，不按镜头方向整体翻转船形"}
+    },
+    {
+      "id": "pursuit_driver", "name": "追击船驾驶者", "zone_ids": ["open_water"], "placement": "初始在追击船后部操纵位置。",
+      "motion": {"mode": "attached", "anchor_element_id": "pursuit_boat", "offset": "船尾中部，双脚在甲板上", "behavior": "身体随船转向，一手操纵，一手在接近时抬起攻击；动作时机由遭遇提案说明。"},
+      "visual_role": "把移动亮点具体化为有人操纵的威胁。",
+      "form": {"silhouette": "短外套与略前倾上身", "proportions": "正常成年尺度，不超过船体可承载的比例", "parts": "深帽、浅色衣领、暗外套、操纵手和持武器手"},
+      "surface_uses": [{"material_id": "clothing", "placement": "人物", "local_treatment": "衣领与持物手保持局部清楚"}],
+      "representation": {"geometry": "人物为二维表现，甲板和操纵位置为三维参照", "surface_images": "衣褶和面部色块", "flat_elements": "人物姿态图随追击船保持位置关系"},
+      "integration": {"contact": "双脚依附追击船甲板，不留在初始世界位置", "lighting": "与追击船受相同冷光，面部不自发光", "occlusion_and_angles": "船缘可遮挡腿部；侧面与远处轮廓仍能识别同一人物"}
+    },
+    {
+      "id": "landing_beacon", "name": "终点石阶灯", "zone_ids": ["landing"], "placement": "石阶东侧固定灯柱，朝向泊位。",
+      "visual_role": "航行末段的稳定暖色目标与上岸参照。",
+      "form": {"silhouette": "短粗灯柱与偏扁灯罩", "proportions": "高于人物头顶少许，尺寸不压过桥体", "parts": "石基、金属杆、遮罩暖灯"},
+      "surface_uses": [{"material_id": "stone", "placement": "灯基", "local_treatment": "与台阶连续"}, {"material_id": "metal", "placement": "灯杆与灯罩", "local_treatment": "窄亮边，保留暗面"}],
+      "representation": {"geometry": "灯柱与灯罩有厚度", "surface_images": "磨损与潮湿痕迹", "flat_elements": "无需独立二维元素"},
+      "integration": {"contact": "固定在台阶侧缘", "lighting": "灯光固定，不跟随驳船", "occlusion_and_angles": "从水面逐渐升高接近；上岸回望时灯仍在同一侧"}
+    }
+  ],
+  "dressing": [
+    {"id": "deck_cargo", "zone_id": "dock", "anchor_element_id": "barge", "contents": "低木箱、绳圈和少量布包", "arrangement": "集中在甲板后半部，船首观察区留空", "visual_role": "构成随船近景与木材细节", "surface_uses": [{"material_id": "wet_timber", "placement": "木箱", "local_treatment": "弱于船首细节"}]},
+    {"id": "dock_props", "zone_id": "dock", "contents": "木踏板、系缆柱与短栏杆", "arrangement": "沿登船处集中，不遮住船首", "visual_role": "给登船画面固定参照", "surface_uses": [{"material_id": "wet_timber", "placement": "踏板", "local_treatment": "近看有湿木纹"}]}
+  ],
+  "initial_state": ["持续小雨，天色、固定灯和船灯均已确定。", "驳船停在起点码头，玩家尚未登船。", "草岸伏击者藏在芦苇后，追击船在远草湾中，两者不在起点视野内。", "终点石阶上方场景尚未设计。"],
+  "experience": [
+    {"id": "m_board", "zone_ids": ["dock"], "cue": "灯照亮的甲板和木踏板", "action": "走上踏板，准备登船", "visual_payoff": "看清低船体、湿木和近处暖灯", "capability_note": "需要登船及随船站立能力；本轮为设计提案", "at": {"route_id": "main_waterway", "segment_id": "r_board", "position": "泊位"}, "observer": {"zone_id": "dock", "anchor_element_id": null, "position": "踏板岸端"}, "situation": [{"element_id": "barge", "zone_id": "dock", "location": "靠岸泊位", "visibility": "完整可见", "action": "静止等候"}], "encounters": []},
+    {"id": "m_depart", "zone_ids": ["dock", "reeds"], "cue": "岸上结构开始退后", "action": "站在船首观察离岸", "visual_payoff": "近舷稳定、草岸滑动，运动关系变得清楚", "capability_note": "需要移动平台与玩家视点关系", "at": {"route_id": "main_waterway", "segment_id": "r_depart", "position": "刚进入草岸水口"}, "observer": {"zone_id": "reeds", "anchor_element_id": "barge", "position": "船首偏左"}, "situation": [{"element_id": "barge", "zone_id": "reeds", "location": "水口中央", "visibility": "船首为近景", "action": "稳定向北驶离"}], "encounters": []},
+    {"id": "m_reed_threat", "zone_ids": ["reeds"], "cue": "左岸草团晃动，出现头肩与浅色面部", "action": "在船上转头观察左岸", "visual_payoff": "近船缘、中景敌人、远桥形成可读层次", "capability_note": "表现岸上显露与攻击提案；不定义伤害和命中机制", "at": {"route_id": "main_waterway", "segment_id": "r_reeds", "position": "接近左岸草团缺口"}, "observer": {"zone_id": "reeds", "anchor_element_id": "barge", "position": "船首偏左"}, "situation": [{"element_id": "barge", "zone_id": "reeds", "location": "草团缺口旁航道", "visibility": "船舷在近景", "action": "继续前行"}, {"element_id": "reed_raiders", "zone_id": "reeds", "location": "左岸缺口，低于芦苇顶端", "visibility": "错开显露头肩和手臂", "action": "向船上攻击"}], "encounters": [{"actor_ids": ["reed_raiders"], "warning": "先有草团扰动，再显露头肩", "action": "岸上人物向经过的驳船发动短暂攻击", "spatial_pressure": "来自船左侧，前方水路仍清楚", "readability": "攻击方向由手臂和局部亮点说明，雨雾不遮满敌人轮廓", "transition": "驳船进入第一桥，岸上敌人被桥体遮住"}]},
+    {"id": "m_low_bridge", "zone_ids": ["low_bridge"], "cue": "第一桥拱边接近头顶", "action": "从船上略微仰视桥腹", "visual_payoff": "天空亮区收缩，近石边掠过，出孔方向露出更宽水面", "capability_note": "需要船与桥的净空和视差；尺寸仅为意向", "at": {"route_id": "main_waterway", "segment_id": "r_low", "position": "中孔内部"}, "observer": {"zone_id": "low_bridge", "anchor_element_id": "barge", "position": "船首偏左"}, "situation": [{"element_id": "barge", "zone_id": "low_bridge", "location": "第一桥中孔", "visibility": "船首与桥腹可见", "action": "缓慢驶过"}, {"element_id": "reed_raiders", "zone_id": "reeds", "location": "桥后原草岸", "visibility": "被桥体遮挡", "action": "停止形成当前画面中的直接压力"}], "encounters": []},
+    {"id": "m_pursuit", "zone_ids": ["open_water"], "cue": "右后方移动冷灯与更急的水纹", "action": "转向右后方观察追击船", "visual_payoff": "开阔水面让两船轮廓和相对运动清楚", "capability_note": "需要局部船只运动和二维驾驶者依附；运行行为待实现", "at": {"route_id": "main_waterway", "segment_id": "r_open", "position": "两桥之间的开阔段中部"}, "observer": {"zone_id": "open_water", "anchor_element_id": "barge", "position": "船首偏左，转头观察"}, "situation": [{"element_id": "barge", "zone_id": "open_water", "location": "主水路中央", "visibility": "近船舷可见", "action": "向第二桥前进"}, {"element_id": "pursuit_boat", "zone_id": "open_water", "location": "驳船右后侧，保留明确水面间隔", "visibility": "冷灯、尖船首和人物均可辨", "action": "接近并短暂保持侧后方位置"}, {"element_id": "pursuit_driver", "zone_id": "open_water", "location": "追击船尾操纵处", "visibility": "头肩、手臂可见", "action": "一手操纵，另一手向驳船攻击"}], "encounters": [{"actor_ids": ["pursuit_boat", "pursuit_driver"], "warning": "先见冷灯和船尾波，再辨认驾驶者", "action": "敌船从侧后方接近，驾驶者攻击", "spatial_pressure": "来自右后方，前方第二桥仍为路线参照", "readability": "敌船尖轮廓和冷光与驳船低轮廓暖光区分，不用大量弹道线覆盖湿地画面", "transition": "到第二桥前落到后方并减速，随后被桥墩与转弯岸墙遮住"}]},
+    {"id": "m_high_bridge", "zone_ids": ["high_bridge"], "cue": "高拱占据前方，远处暖岸灯从一侧出现", "action": "回看前方并随船穿桥转弯", "visual_payoff": "高拱与近桥墩形成不同于第一桥的画面；后方威胁逐渐退出视线", "capability_note": "桥体遮挡与转向为设计意图，尚未做运行检视", "at": {"route_id": "main_waterway", "segment_id": "r_high", "position": "高拱后半段，开始西北转向"}, "observer": {"zone_id": "high_bridge", "anchor_element_id": "barge", "position": "船首偏左"}, "situation": [{"element_id": "barge", "zone_id": "high_bridge", "location": "高拱内靠出口", "visibility": "近景船首与高拱", "action": "开始转向终点支汊"}, {"element_id": "pursuit_boat", "zone_id": "high_bridge", "location": "后方桥外入孔处", "visibility": "逐步被桥墩和船身视角遮住", "action": "减速调整，暂未进入终点支汊"}], "encounters": []},
+    {"id": "m_land", "zone_ids": ["landing"], "cue": "固定岸灯照亮石阶", "action": "待船靠稳后上岸，回望驳船", "visual_payoff": "脚下变成稳定石面，船体从近景载体变成完整可见物件", "capability_note": "需要靠岸与离船动作；下一个陆地场景尚未设计", "at": {"route_id": "main_waterway", "segment_id": "r_land", "position": "已经靠稳"}, "observer": {"zone_id": "landing", "anchor_element_id": null, "position": "最低一级平台"}, "situation": [{"element_id": "barge", "zone_id": "landing", "location": "平台西侧泊位", "visibility": "完整侧面可见", "action": "靠稳，船灯仍亮"}, {"element_id": "pursuit_boat", "zone_id": "high_bridge", "location": "上一段主水道", "visibility": "被弯道岸墙遮挡", "action": "未进入靠岸支汊"}], "encounters": []}
+  ],
+  "progression": {
+    "moment_ids": ["m_board", "m_depart", "m_reed_threat", "m_low_bridge", "m_pursuit", "m_high_bridge", "m_land"],
+    "transitions": [
+      {"from_moment": "m_board", "to_moment": "m_depart", "when": "玩家登船后，驳船离岸；具体启动方式留给玩法实现"},
+      {"from_moment": "m_depart", "to_moment": "m_reed_threat", "when": "船头接近草岸缺口"},
+      {"from_moment": "m_reed_threat", "to_moment": "m_low_bridge", "when": "船进入第一桥中孔"},
+      {"from_moment": "m_low_bridge", "to_moment": "m_pursuit", "when": "驶出第一桥，在宽水面前行一段"},
+      {"from_moment": "m_pursuit", "to_moment": "m_high_bridge", "when": "驳船先到第二桥并进入"},
+      {"from_moment": "m_high_bridge", "to_moment": "m_land", "when": "转入支汊、靠稳，玩家下船"}
+    ]
+  }
+}

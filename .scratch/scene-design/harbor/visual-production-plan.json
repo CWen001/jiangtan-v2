@@ -1,0 +1,147 @@
+{
+  "id": "harbor_visual_round_01",
+  "revision": "plan-01",
+  "title": "旧埠首轮运行视点",
+  "scene_design": {
+    "id": "harbor_landing",
+    "revision": "design-01"
+  },
+  "exploration": {
+    "focus": "一个主目标图，加门内和下层回望的运行检查视点",
+    "preserve": "已选美术预设、空间连接与二维人物",
+    "may_vary": "局部道具摆放、灯强、模型和贴图制作细节；大布局变更回写主方案"
+  },
+  "views": [
+    {
+      "id": "hero",
+      "moment_id": "arrival",
+      "camera": {
+        "zone_id": "upper",
+        "position": "X=4.3,Y=2.85,Z=8；垂直FOV=75度，画幅16:10",
+        "eye_level": "站姿眼高1.65米",
+        "look_toward": "X=3,Y=2.65,Z=-6，仓门与北侧泊船之间",
+        "framing": "左侧仓库约半幅，右侧江面；地面与台阶为前景"
+      },
+      "subjects": {
+        "zone_ids": [
+          "upper"
+        ],
+        "connection_ids": [
+          "doorway",
+          "steps"
+        ],
+        "element_ids": [
+          "warehouse_shell",
+          "shore_power",
+          "courier",
+          "barge",
+          "stairs"
+        ]
+      },
+      "composition": "左侧仓库约半幅，右侧江面；地面与台阶为前景",
+      "emphasis": "一致空间中的漫画形体、材质与人物融合",
+      "state_changes": []
+    },
+    {
+      "id": "inside",
+      "moment_id": "threshold",
+      "camera": {
+        "zone_id": "warehouse",
+        "position": "X=-8,Y=2.85,Z=-4；垂直FOV=75度，画幅16:10",
+        "eye_level": "站姿眼高1.65米",
+        "look_toward": "朝东穿门看江面",
+        "framing": "门框形成前景，江面和泊船在外侧"
+      },
+      "subjects": {
+        "zone_ids": [
+          "warehouse"
+        ],
+        "connection_ids": [
+          "doorway",
+          "steps"
+        ],
+        "element_ids": [
+          "warehouse_shell",
+          "shore_power",
+          "courier",
+          "barge",
+          "stairs"
+        ]
+      },
+      "composition": "门框形成前景，江面和泊船在外侧",
+      "emphasis": "一致空间中的漫画形体、材质与人物融合",
+      "state_changes": []
+    },
+    {
+      "id": "lower",
+      "moment_id": "waterline",
+      "camera": {
+        "zone_id": "lower",
+        "position": "X=8.5,Y=1.65,Z=4",
+        "eye_level": "站姿眼高1.65米",
+        "look_toward": "朝西北看仓库与人物",
+        "framing": "近处台阶、上方人物和深门洞形成高差"
+      },
+      "subjects": {
+        "zone_ids": [
+          "lower"
+        ],
+        "connection_ids": [
+          "doorway",
+          "steps"
+        ],
+        "element_ids": [
+          "warehouse_shell",
+          "shore_power",
+          "courier",
+          "barge",
+          "stairs"
+        ]
+      },
+      "composition": "近处台阶、上方人物和深门洞形成高差",
+      "emphasis": "一致空间中的漫画形体、材质与人物融合",
+      "state_changes": []
+    }
+  ],
+  "variants": [],
+  "scene_views": [
+    {
+      "id": "hero_target",
+      "view_id": "hero",
+      "variant_id": null,
+      "presentation": "16:10、无文字、玩家实际视高的引擎目标画面",
+      "reference_deliverable_ids": []
+    }
+  ],
+  "object_studies": [],
+  "storyboards": [
+    {
+      "id": "walkthrough",
+      "variant_id": null,
+      "presentation": "三个运行视点截图表示到达、穿门、下台阶的体验；不当作实时连续录像",
+      "reference_deliverable_ids": [
+        "hero_target"
+      ],
+      "frames": [
+        {
+          "id": "f0",
+          "view_id": "hero",
+          "player_action": "沿步道走近",
+          "visual_change": "人物、门洞与岸电设备细节逐渐清楚"
+        },
+        {
+          "id": "f1",
+          "view_id": "inside",
+          "player_action": "进出仓库并回望",
+          "visual_change": "江面被框景，室内外尺度和冷暖转换"
+        },
+        {
+          "id": "f2",
+          "view_id": "lower",
+          "player_action": "走下石阶再向仓库回望",
+          "visual_change": "水面接近，仓墙高差显露，人物产生前后遮挡"
+        }
+      ]
+    }
+  ]
+}

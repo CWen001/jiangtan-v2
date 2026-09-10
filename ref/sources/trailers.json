@@ -1,0 +1,20 @@
+[
+  {
+    "id": 257385117,
+    "name": "Fallen Aces Episode 2 OUT NOW",
+    "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257385117/2c89b89ccdda2ab3224f386b3844540de9ecb59e/movie_600x337.jpg?t=1785084311",
+    "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1411910/185556452/e4dc9ed29d5f10b9aef98a54e02e73c027edbad9/1785026722/dash_av1.mpd?t=1785084311",
+    "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1411910/185556452/e4dc9ed29d5f10b9aef98a54e02e73c027edbad9/1785026722/dash_h264.mpd?t=1785084311",
+    "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1411910/185556452/e4dc9ed29d5f10b9aef98a54e02e73c027edbad9/1785026722/hls_264_master.m3u8?t=1785084311",
+    "highlight": true
+  },
+  {
+    "id": 257031324,
+    "name": "Fallen Aces Episode 1 OUT NOW",
+    "thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257031324/movie.293x165.jpg?t=1718390387",
+    "dash_av1": "https://video.akamai.steamstatic.com/store_trailers/1411910/714062/7edb926a54c2c769d009c3016576f4aa2b5053b1/1750685972/dash_av1.mpd?t=1718390387",
+    "dash_h264": "https://video.akamai.steamstatic.com/store_trailers/1411910/714062/7edb926a54c2c769d009c3016576f4aa2b5053b1/1750685972/dash_h264.mpd?t=1718390387",
+    "hls_h264": "https://video.akamai.steamstatic.com/store_trailers/1411910/714062/7edb926a54c2c769d009c3016576f4aa2b5053b1/1750685972/hls_264_master.m3u8?t=1718390387",
+    "highlight": true
+  }
+]

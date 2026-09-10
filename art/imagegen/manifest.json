@@ -1,0 +1,72 @@
+[
+  {
+    "path": "game/assets/generated/brick.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "a124712d7bd980e2df6ca917eeaddec25ca9a2413a354ca8345015439c3681fc",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/brick.md"
+  },
+  {
+    "path": "game/assets/generated/contact.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "sha256": "9bf903e3ca98b5e479d229ba1b8ea833157cbcbfc6cbc70e47b38c308dd69d05",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/contact.md",
+    "alpha_range": [
+      0,
+      254
+    ]
+  },
+  {
+    "path": "game/assets/generated/floor.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "1bd91187ba8f491250200ea1f5591644a1411bb2457660d2cce30e227c6c9d58",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/floor.md"
+  },
+  {
+    "path": "game/assets/generated/poster.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "sha256": "042b4d4a9789e39f57f59b96c7e1069d2dc660a4adc4207ffcc85b09a6abea11",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/poster.md"
+  },
+  {
+    "path": "game/assets/generated/records.png",
+    "size": [
+      2172,
+      724
+    ],
+    "mode": "RGB",
+    "sha256": "f6b5738e5220531df459a84a7ab9f4ada1096488df07d3dd2ae3228de30c1026",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/records.md"
+  },
+  {
+    "path": "game/assets/generated/wood.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "sha256": "768bc73e64f800e7d4c0d555f956c27e5aa67df6e9102a26a344205d687f3b17",
+    "generator": "Codex built-in imagegen",
+    "prompt_file": "art/imagegen/wood.md"
+  }
+]

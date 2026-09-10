@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101d25">
+  <title>江滩 II · 在线体验</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/cwen-mark.svg">
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101d25;color:#f1e8d4;font-family:"Avenir Next","PingFang SC",sans-serif}body{touch-action:none}
+    #stage{position:fixed;inset:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}#canvas{display:block;width:100%!important;height:100%!important;outline:none;touch-action:none}
+    .toolbar{position:fixed;z-index:3;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));display:flex;gap:8px}button,.toolbar a{border:1px solid #f1e8d440;background:#101d25d9;color:#f1e8d4;font:12px "PingFang SC",sans-serif;min-height:44px;padding:10px 15px;text-decoration:none;display:flex;align-items:center;justify-content:center;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid #edba72;outline-offset:3px}
+    .overlay{position:fixed;inset:0;z-index:2;display:grid;place-content:center;text-align:center;padding:28px;background:linear-gradient(#081722c9,#081722ed),url('../assets/cover.jpg') center/cover}.overlay[hidden]{display:none}.kicker{font-size:11px;letter-spacing:.3em;color:#edba72}h1{font:400 clamp(32px,6vw,62px) "Songti SC",serif;margin:18px 0 24px;letter-spacing:.1em}p{font-size:13px;line-height:1.9;color:#bfcacb;margin:8px 0}progress{width:min(320px,75vw);height:5px;margin:10px auto;accent-color:#edba72}#message{max-width:560px;overflow-wrap:anywhere}#retry{margin:16px auto 0;width:150px}#retry[hidden]{display:none}#rotate{display:none;z-index:4;background:#101d25f5}#rotate a{color:#edba72;text-underline-offset:5px;font-size:13px;margin-top:24px;padding:12px}
+    #hint{position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.06em;background:#101d25b8;padding:9px 14px;white-space:nowrap;pointer-events:none;border:1px solid #f1e8d425}.touch #hint{display:none}
+    .touch .toolbar{left:50%;right:auto;transform:translateX(-50%)}
+    @media(orientation:portrait){.touch #rotate{display:grid}}
+    @media(max-height:500px){.toolbar{top:max(8px,env(safe-area-inset-top))}.toolbar a,.toolbar button{font-size:11px;padding:8px 12px}}
+  </style>
+  $GODOT_HEAD_INCLUDE
+</head>
+<body>
+  <div id="stage"><canvas id="canvas" tabindex="0" aria-label="江滩 II 3D 游戏画面">请使用支持 Canvas 的浏览器。</canvas></div>
+  <nav class="toolbar" aria-label="游戏选项"><a href="../">返回封面</a><button id="fullscreen" type="button">全屏</button></nav>
+  <section id="loading" class="overlay" aria-label="加载游戏">
+    <p class="kicker">JIANGTAN · AFTER DARK</p><h1>正在靠岸</h1>
+    <progress id="progress" aria-label="游戏资源加载进度"></progress>
+    <p id="message" role="status" aria-live="polite">正在加载江城雨夜，首次进入请稍候…</p>
+    <button id="retry" type="button" hidden>重新加载</button>
+  </section>
+  <p id="hint">点击画面控制视角 · WASD 移动 · Esc 释放鼠标</p>
+  <section id="rotate" class="overlay" aria-label="横屏提示"><p class="kicker">JIANGTAN II</p><h1>将手机横过来</h1><p>左手移动，右手观察。<br>横屏后继续探索江城。</p><a href="../">返回封面</a></section>
+  <noscript><section class="overlay"><h1>请启用 JavaScript</h1><p>江滩 II 需要 JavaScript 才能运行。</p><a href="../">返回封面</a></section></noscript>
+  <script src="$GODOT_URL"></script>
+  <script>
+    'use strict';
+    const config = $GODOT_CONFIG;
+    const params = new URLSearchParams(location.search);
+    const touch = matchMedia('(pointer:coarse)').matches || navigator.maxTouchPoints > 0 || params.get('touch') === '1';
+    document.documentElement.classList.toggle('touch', touch);
+    config.canvasResizePolicy = 0;
+    config.args = ['--'];
+    if (touch) config.args.push('--touch');
+    const canvas = document.getElementById('canvas');
+    const loading = document.getElementById('loading');
+    const message = document.getElementById('message');
+    const progress = document.getElementById('progress');
+    const retry = document.getElementById('retry');
+    function resize() {
+      const { width, height } = canvas.getBoundingClientRect();
+      const scale = Math.min(devicePixelRatio || 1, 1280 / width, 720 / height);
+      canvas.width = Math.max(1, Math.round(width * scale));
+      canvas.height = Math.max(1, Math.round(height * scale));
+    }
+    new ResizeObserver(resize).observe(document.getElementById('stage'));
+    window.addEventListener('resize', resize);
+    canvas.addEventListener('contextmenu', event => event.preventDefault());
+    retry.addEventListener('click', () => location.reload());
+    function fail(error) {
+      console.error(error);
+      loading.hidden = false;
+      progress.hidden = true;
+      message.textContent = '暂时无法进入：' + (error?.message || String(error));
+      retry.hidden = false;
+    }
+    canvas.addEventListener('webglcontextlost', () => fail(new Error('图形画面已中断，请重新加载。')));
+    document.getElementById('fullscreen').addEventListener('click', async () => {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+          if (touch) { try { await screen.orientation?.lock?.('landscape'); } catch {} }
+        } else document.getElementById('fullscreen').textContent = '请横屏体验';
+      } catch { document.getElementById('fullscreen').textContent = '浏览器未开启全屏'; }
+    });
+    document.addEventListener('fullscreenchange', () => {
+      document.getElementById('fullscreen').textContent = document.fullscreenElement ? '退出全屏' : '全屏';
+    });
+    const missing = Engine.getMissingFeatures({ threads: $GODOT_THREADS_ENABLED });
+    if (missing.length) fail(new Error('浏览器需要支持 ' + missing.join('、') + '。请使用新版 Safari、Chrome 或 Edge。'));
+    else {
+      resize();
+      const engine = new Engine(config);
+      engine.startGame({ onProgress(current, total) {
+        if (total > 0) {
+          progress.max = total; progress.value = current;
+          message.textContent = current < total ? '正在加载资源 ' + Math.round(current / total * 100) + '%' : '正在点亮码头，马上就好…';
+        } else progress.removeAttribute('value');
+      }}).then(() => { loading.hidden = true; canvas.focus(); canvas.dataset.ready = 'true'; }, fail);
+    }
+  </script>
+</body>
+</html>

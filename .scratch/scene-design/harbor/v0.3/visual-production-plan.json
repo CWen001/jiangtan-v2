@@ -1,0 +1,176 @@
+{
+  "id": "harbor_v3_visual",
+  "revision": "plan-03",
+  "scene_design": {
+    "id": "harbor_landing_v3",
+    "revision": "design-03"
+  },
+  "exploration": {
+    "focus": "恢复错层岸线、建筑进退和人物尺度，检视第一人称互搏",
+    "preserve": "已选美术与三组视觉关系",
+    "may_vary": "局部构造、道具和灯光，在保持主关系时调整比例"
+  },
+  "views": [
+    {
+      "id": "arrival",
+      "moment_id": "arrival",
+      "camera": {
+        "zone_id": "upper",
+        "position": "[-1.8, 4.85, 7]",
+        "eye_level": "玩家站姿1.65米",
+        "look_toward": "[1, 2, -8]",
+        "framing": "上层石阶口向下，左侧建筑、人物与右侧船形成三层",
+        "fov_degrees": 68,
+        "aspect_ratio": "16:10"
+      },
+      "subjects": {
+        "zone_ids": [
+          "upper"
+        ],
+        "group_ids": [
+          "workfront",
+          "landing",
+          "mooring"
+        ],
+        "element_ids": [],
+        "relation_ids": [
+          "bank_layers"
+        ]
+      },
+      "composition": "上层石阶口向下，左侧建筑、人物与右侧船形成三层",
+      "emphasis": "上下层与主人物是否形成足够强的形象",
+      "state_changes": []
+    },
+    {
+      "id": "lower",
+      "moment_id": "descent",
+      "camera": {
+        "zone_id": "lower",
+        "position": "[2, 2.25, -3]",
+        "eye_level": "玩家站姿1.65米",
+        "look_toward": "[-6, 5, -10]",
+        "framing": "下层回望工作廊、岸墙与屋顶",
+        "fov_degrees": 68,
+        "aspect_ratio": "16:10"
+      },
+      "subjects": {
+        "zone_ids": [
+          "lower"
+        ],
+        "group_ids": [
+          "workfront"
+        ],
+        "element_ids": [],
+        "relation_ids": [
+          "bank_layers"
+        ]
+      },
+      "composition": "下层回望工作廊、岸墙与屋顶",
+      "emphasis": "侧看回望时建筑是否仍有层次",
+      "state_changes": []
+    },
+    {
+      "id": "inside",
+      "moment_id": "workfront",
+      "camera": {
+        "zone_id": "warehouse",
+        "position": "[-12, 4.85, -9]",
+        "eye_level": "玩家站姿1.65米",
+        "look_toward": "[3, 2, -9]",
+        "framing": "仓内通过门洞看江面",
+        "fov_degrees": 68,
+        "aspect_ratio": "16:10"
+      },
+      "subjects": {
+        "zone_ids": [
+          "warehouse"
+        ],
+        "group_ids": [
+          "workfront"
+        ],
+        "element_ids": [],
+        "relation_ids": []
+      },
+      "composition": "仓内通过门洞看江面",
+      "emphasis": "门洞、货物与水面的深度",
+      "state_changes": []
+    },
+    {
+      "id": "fight",
+      "moment_id": "brawl",
+      "camera": {
+        "zone_id": "lower",
+        "position": "[-0.6, 2.25, -3.5]",
+        "eye_level": "玩家站姿1.65米",
+        "look_toward": "[-0.6, 1.7, -5.5]",
+        "framing": "近距离对手，近景拳头不遮住对手预备",
+        "fov_degrees": 68,
+        "aspect_ratio": "16:10"
+      },
+      "subjects": {
+        "zone_ids": [
+          "lower"
+        ],
+        "group_ids": [
+          "landing"
+        ],
+        "element_ids": [
+          "courier"
+        ],
+        "relation_ids": []
+      },
+      "composition": "近距离对手，近景拳头不遮住对手预备",
+      "emphasis": "出拳、受击与地形是否读得清",
+      "state_changes": [
+        "对手已戒备"
+      ]
+    }
+  ],
+  "variants": [],
+  "scene_views": [
+    {
+      "id": "arrival_target",
+      "view_id": "arrival",
+      "variant_id": null,
+      "purpose": "implementation_target",
+      "presentation": "以用户提供旧埠图保留吸引力和布局方向，不锁定旧简化小样",
+      "reference_deliverable_ids": []
+    }
+  ],
+  "object_studies": [],
+  "storyboards": [
+    {
+      "id": "walk_and_brawl",
+      "variant_id": null,
+      "purpose": "design_exploration",
+      "presentation": "四个第一人称时刻，实际图像另存",
+      "reference_deliverable_ids": [],
+      "frames": [
+        {
+          "id": "f0",
+          "view_id": "arrival",
+          "player_action": "到达石阶口",
+          "visual_change": "先见上下层"
+        },
+        {
+          "id": "f1",
+          "view_id": "inside",
+          "player_action": "沿廊进入仓库",
+          "visual_change": "门洞框出江面"
+        },
+        {
+          "id": "f2",
+          "view_id": "lower",
+          "player_action": "走下石阶后回望",
+          "visual_change": "建筑从高处展开"
+        },
+        {
+          "id": "f3",
+          "view_id": "fight",
+          "player_action": "挑战NPC并互搏",
+          "visual_change": "拳与对手预备、受击对应"
+        }
+      ]
+    }
+  ]
+}
