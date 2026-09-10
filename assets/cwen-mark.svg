@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="52" viewBox="-17 0 165 52">
+  <!-- Original five-slash mark from scripts/ui/arcade_intro.gd in the older 2D project. -->
+  <g fill="#ef4036">
+    <polygon points="0,0 24,0 7,52 -17,52"/>
+    <polygon points="31,0 55,0 38,52 14,52"/>
+    <polygon points="62,0 86,0 69,52 45,52"/>
+  </g>
+  <g fill="#45cbe8">
+    <polygon points="93,0 117,0 100,52 76,52"/>
+    <polygon points="124,0 148,0 131,52 107,52"/>
+  </g>
+</svg>

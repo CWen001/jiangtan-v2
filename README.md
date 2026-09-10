@@ -11,3 +11,5 @@
 **C.WEN** · [cwen@hust.edu.cn](mailto:cwen@hust.edu.cn)
 
 运行时使用 [Godot Engine](https://godotengine.org/)，遵循其 [MIT 许可与第三方声明](https://godotengine.org/license/)。
+
+GitHub Actions 从官方 Godot 4.7.2 模板提取引擎，合并 `.release/` 中的场景资源，并校验 SHA256 后发布到 Pages。分块仅用于上传，网页加载完整游戏文件。

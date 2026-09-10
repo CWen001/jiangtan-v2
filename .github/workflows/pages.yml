@@ -1,0 +1,43 @@
+name: Publish Jiangtan II
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - name: Assemble and verify the website
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir _site
+          cp index.html .nojekyll _site/
+          cp -R assets play _site/
+          cat .release/index.pck.* > _site/play/index.pck
+          curl -fL --retry 3 https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz -o "$RUNNER_TEMP/godot.tpz"
+          unzip -p "$RUNNER_TEMP/godot.tpz" templates/web_nothreads_release.zip > "$RUNNER_TEMP/web.zip"
+          unzip -p "$RUNNER_TEMP/web.zip" godot.wasm > _site/play/index.wasm
+          cd _site
+          sha256sum -c ../.release/checksums.sha256
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
